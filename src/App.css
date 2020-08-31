@@ -4,8 +4,8 @@
     grid-template-columns: repeat(4, 1fr);
     /*grid-template-rows: repeat(3, 1fr);*/
     grid-gap: 10px;
-    border: 10px solid lightgray;
-    background: lightgray ;
+    border: 10px solid slategrey;
+    background: slategrey ;
 }
 
 .grid-item{
@@ -16,23 +16,23 @@
 .header{
     grid-column: span 4;
     padding: 10px;
-    background-color: lightgray;
+    background-color: slategrey;
 }
 
 .navbar{
     padding: 10px;
-    background-color: lightgray;
+    background-color: slategrey;
 }
 
 .content{
     grid-column: span 3;
     padding: 10px;
     min-height: 300px;
-    background-color: lightgray;
+    background-color: slategrey;
 }
 
 .footer{
     grid-column: span 4;
     padding: 10px;
-    background-color: lightgray;
+    background-color: slategrey;
 }

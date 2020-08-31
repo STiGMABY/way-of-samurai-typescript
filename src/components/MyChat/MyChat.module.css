@@ -1,12 +1,12 @@
-.dialogsWrapper{
+.myChatWrapper{
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
 
-.dialogs {
-
-}
-
 .dialogs .active{
     color: dodgerblue;
+}
+
+.dialogItemLogo{
+    width: 25px;
 }

@@ -10,7 +10,7 @@ function NavBar() {
             </div>
 
             <div className={s.item}>
-                <NavLink to="/messages" activeClassName={s.activeLink}>Messages</NavLink>
+                <NavLink to="/messages" activeClassName={s.activeLink}>My Chat</NavLink>
             </div>
 
             <div>

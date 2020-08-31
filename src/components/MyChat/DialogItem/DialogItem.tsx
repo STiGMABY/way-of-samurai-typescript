@@ -1,10 +1,11 @@
 import React from "react";
-import s from "../Dialogs.module.css";
+import s from "../MyChat.module.css";
 import {NavLink} from "react-router-dom";
+import logo from '../../../images/logo.svg'
 
 type PropsType = {
     id: string
-    name: string
+    userName: string
 }
 
 function DialogItem(props: PropsType) {
@@ -13,7 +14,8 @@ function DialogItem(props: PropsType) {
     return (
         <div>
             <div className={s.dialog + ' ' + s.active}>
-                <NavLink to={path}>{props.name}</NavLink>
+                <img src={logo} alt="avatar" className={s.dialogItemLogo}/>
+                <NavLink to={path}>{props.userName}</NavLink>
             </div>
         </div>
     )
