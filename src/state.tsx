@@ -1,4 +1,5 @@
 import {v1} from "uuid";
+import {rerenderEntireTree} from "./render";
 
 export type MainPagePostsListType = {
     id: string
@@ -18,6 +19,7 @@ export type UserMessagesListType = {
 
 export type MainPageDataType = {
     mainPagePostsList: Array<MainPagePostsListType>
+    newPostText: string
 
 }
 export type ChatDataType = {
@@ -38,7 +40,8 @@ let state: RootStateType = {
             {id: v1(), message: 'React', likesCount: 3},
             {id: v1(), message: 'Have a nice day', likesCount: 9},
             {id: v1(), message: 'Lern hard!', likesCount: 6}
-        ]
+        ],
+        newPostText: ''
     },
     chatData: {
         userDialogsList: [
@@ -52,6 +55,22 @@ let state: RootStateType = {
             {id: v1(), message: 'Meow'}
         ]
     }
+}
+
+export let addPost = () => {
+    let post = {
+        id: v1(),
+        message: state.mainPageData.newPostText,
+        likesCount: 0
+    }
+    state.mainPageData.mainPagePostsList.unshift(post)
+    state.mainPageData.newPostText = ''
+    rerenderEntireTree(state)
+}
+
+export let updateNewPostText = (newPostText: string) => {
+    state.mainPageData.newPostText = newPostText
+    rerenderEntireTree(state)
 }
 
 export default state

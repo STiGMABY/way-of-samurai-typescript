@@ -11,33 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePostItem/MainPagePostItem.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePostItem/MainPagePostItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePosts.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePosts.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MyChat/DialogItem/DialogItem.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MyChat/MessageItem/MessageItem.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MyChat/MyChat.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state-example.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/render.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/done.txt" beforeDir="false" afterPath="$PROJECT_DIR$/done.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/MyPosts/MyPosts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/done.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/MyPosts/MyPosts.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/MyPosts/Post/Post.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/MyPosts/Post/Post.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages/DialogItem/DialogItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages/DialogItem/DialogItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyChat/DialogItem/DialogItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyChat/MyChat.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages/Dialogs.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages/MessageItem/MessageItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages/MessageItem/MessageItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyChat/MessageItem/MessageItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,33 +49,33 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePostItem" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Diff &amp; Merge" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts\MainPagePostItem" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\images" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content\ContentInterface\ContentInterface.tsx" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\NavBar" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Header" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Footer" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content" />
-    </key>
-    <key name="es6.move.members.recent.items">
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content\ContentInterface\ContentInterface.tsx" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts\MainPagePostItem" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\images" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\NavBar" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -131,7 +113,13 @@
       <workItem from="1598725565736" duration="10548000" />
       <workItem from="1598769958524" duration="12201000" />
       <workItem from="1598856010541" duration="4334000" />
-      <workItem from="1598867972643" duration="10534000" />
+      <workItem from="1598867972643" duration="11549000" />
+      <workItem from="1598888589754" duration="1953000" />
+      <workItem from="1598902769297" duration="958000" />
+      <workItem from="1598943149695" duration="1060000" />
+      <workItem from="1598961739253" duration="1427000" />
+      <workItem from="1599044522184" duration="7761000" />
+      <workItem from="1599060596024" duration="5736000" />
     </task>
     <servers />
   </component>
@@ -150,15 +138,20 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
     <state x="282" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598733646974">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="282" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1598733646974" />
-    <state x="462" y="117" key="FileChooserDialogImpl" timestamp="1598734356675">
+    <state x="462" y="117" key="FileChooserDialogImpl" timestamp="1598972710723">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598734356675" />
+    <state x="462" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598972710723" />
     <state width="1343" height="178" key="GridCell.Tab.0.bottom" timestamp="1598737830726">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -175,10 +168,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1343" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598737830726" />
-    <state x="450" y="0" width="916" height="717" key="SettingsEditor" timestamp="1598732973812">
+    <state x="450" y="0" width="916" height="717" key="SettingsEditor" timestamp="1598943623704">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="450" y="0" width="916" height="717" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598732973812" />
+    <state x="450" y="0" width="916" height="717" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598943623704" />
     <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1598880659365">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
