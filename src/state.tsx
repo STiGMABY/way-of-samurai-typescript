@@ -1,5 +1,4 @@
 import {v1} from "uuid";
-import {rerenderEntireTree} from "./render";
 
 export type MainPagePostsListType = {
     id: string
@@ -32,45 +31,59 @@ export type RootStateType = {
     chatData: ChatDataType
 }
 
-let state: RootStateType = {
-    mainPageData: {
-        mainPagePostsList: [
-            {id: v1(), message: 'HTML', likesCount: 3},
-            {id: v1(), message: 'CSS', likesCount: 5},
-            {id: v1(), message: 'React', likesCount: 3},
-            {id: v1(), message: 'Have a nice day', likesCount: 9},
-            {id: v1(), message: 'Lern hard!', likesCount: 6}
-        ],
-        newPostText: ''
+export type StoreType = {
+    _state: RootStateType
+
+}
+
+let store = {
+    _state: {
+        mainPageData: {
+            mainPagePostsList: [
+                {id: v1(), message: 'HTML', likesCount: 3},
+                {id: v1(), message: 'CSS', likesCount: 5},
+                {id: v1(), message: 'React', likesCount: 3},
+                {id: v1(), message: 'Have a nice day', likesCount: 9},
+                {id: v1(), message: 'Lern hard!', likesCount: 6}
+            ],
+            newPostText: ''
+        },
+        chatData: {
+            userDialogsList: [
+                {id: v1(), userName: 'Andrei'},
+                {id: v1(), userName: 'Lera'},
+                {id: v1(), userName: 'Musia'}
+            ],
+            userMessagesList: [
+                {id: v1(), message: 'Hello'},
+                {id: v1(), message: 'How are you?'},
+                {id: v1(), message: 'Meow'}
+            ]
+        }
     },
-    chatData: {
-        userDialogsList: [
-            {id: v1(), userName: 'Andrei'},
-            {id: v1(), userName: 'Lera'},
-            {id: v1(), userName: 'Musia'}
-        ],
-        userMessagesList: [
-            {id: v1(), message: 'Hello'},
-            {id: v1(), message: 'How are you?'},
-            {id: v1(), message: 'Meow'}
-        ]
+    getState(){
+        return this._state
+    },
+    rerenderEntireTree(state: any) {
+        console.log('state changed')
+    },
+    addPost(){
+        let post = {
+            id: v1(),
+            message: this._state.mainPageData.newPostText,
+            likesCount: 0
+        }
+        this._state.mainPageData.mainPagePostsList.unshift(post)
+        this._state.mainPageData.newPostText = ''
+        this.rerenderEntireTree(this._state)
+    },
+    updateNewPostText(newPostText: string){
+        this._state.mainPageData.newPostText = newPostText
+        this.rerenderEntireTree(this._state)
+    },
+    subscribe(observer: any) {
+        this.rerenderEntireTree = observer
     }
 }
 
-export let addPost = () => {
-    let post = {
-        id: v1(),
-        message: state.mainPageData.newPostText,
-        likesCount: 0
-    }
-    state.mainPageData.mainPagePostsList.unshift(post)
-    state.mainPageData.newPostText = ''
-    rerenderEntireTree(state)
-}
-
-export let updateNewPostText = (newPostText: string) => {
-    state.mainPageData.newPostText = newPostText
-    rerenderEntireTree(state)
-}
-
-export default state
+export default store
