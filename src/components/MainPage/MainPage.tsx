@@ -6,8 +6,6 @@ import {ActionsType, MainPageDataType} from "../../state";
 type PropsType = {
     mainPageData: MainPageDataType
     dispatch: (action: ActionsType) => void
-    // addPost: () => void
-    // updateNewPostText: (newPostText: string) => void
 }
 
 function MainPage(props: PropsType) {
@@ -16,8 +14,6 @@ function MainPage(props: PropsType) {
             <MainPageInterface
                 newPostText={props.mainPageData.newPostText}
                 dispatch={props.dispatch}
-                // updateNewPostText={props.updateNewPostText}
-                // addPost={props.addPost}
             />
             <MainPagePosts mainPagePostsList={props.mainPageData.mainPagePostsList}/>
         </div>

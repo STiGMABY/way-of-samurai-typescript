@@ -11,8 +11,6 @@ import MyChat from "./components/MyChat/MyChat";
 type PropsType = {
     state: RootStateType
     dispatch: (action: ActionsType) => void
-    // addPost: () => void
-    // updateNewPostText: (newPostText: string) => void
 }
 
 function App(props: PropsType) {
@@ -29,12 +27,11 @@ function App(props: PropsType) {
                 <Route path='/content'
                        render={() => <MainPage
                            dispatch={props.dispatch}
-                           // updateNewPostText={props.updateNewPostText}
-                           // addPost={props.addPost}
                            mainPageData={props.state.mainPageData}/>}/>
 
                 <Route path='/messages'
                        render={() => <MyChat
+                           dispatch={props.dispatch}
                            chatData={props.state.chatData}/>}/>
             </div>
             <div className='grid-item footer'>

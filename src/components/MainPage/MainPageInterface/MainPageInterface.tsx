@@ -6,8 +6,6 @@ import {ActionsType} from "../../../state";
 type PropsType ={
     dispatch: (action: ActionsType) => void
     newPostText: string
-    // addPost: () => void
-    // updateNewPostText: (newPostText: string) => void
 }
 
 export function MainPageInterface(props: PropsType) {
@@ -15,14 +13,11 @@ export function MainPageInterface(props: PropsType) {
     let newPostElement: React.RefObject<any> = React.createRef()
 
     let addPost = () => {
-        //let text = newPostElement.current.value
-        // props.addPost()
         props.dispatch({type: "ADD-POST"})
     }
 
     let onPostChange = () => {
         let updateNewPostText = newPostElement.current.value
-        // props.updateNewPostText(updateNewPostText)
         props.dispatch({type: "UPDATE-NEW-POST-TEXT", newPostText: updateNewPostText})
     }
 

@@ -24,6 +24,7 @@ export type MainPageDataType = {
 export type ChatDataType = {
     userDialogsList: Array<UserDialogsListType>
     userMessagesList: Array<UserMessagesListType>
+    newChatPostText: string
 }
 
 export type RootStateType = {
@@ -50,7 +51,16 @@ type UpdateNewPostTextType = {
     newPostText: string
 }
 
-export type ActionsType = AddPostActionType | UpdateNewPostTextType
+type AddChatActionType = {
+    type: 'ADD-CHAT-POST'
+}
+
+type UpdateNewChatText = {
+    type: 'UPDATE-NEW-CHAT-TEXT'
+    newChatPostText: string
+}
+
+export type ActionsType = AddPostActionType | UpdateNewPostTextType | AddChatActionType | UpdateNewChatText
 
 let store: StoreType = {
     _state: {
@@ -74,7 +84,8 @@ let store: StoreType = {
                 {id: v1(), message: 'Hello'},
                 {id: v1(), message: 'How are you?'},
                 {id: v1(), message: 'Meow'}
-            ]
+            ],
+            newChatPostText: ''
         }
     },
     rerenderEntireTree(state: any) {
@@ -86,20 +97,6 @@ let store: StoreType = {
     subscribe(observer: any) {
         this.rerenderEntireTree = observer
     },
-    // addPost(){
-    //     let post = {
-    //         id: v1(),
-    //         message: this._state.mainPageData.newPostText,
-    //         likesCount: 0
-    //     }
-    //     this._state.mainPageData.mainPagePostsList.unshift(post)
-    //     this._state.mainPageData.newPostText = ''
-    //     this.rerenderEntireTree(this._state)
-    // },
-    // updateNewPostText(newPostText: string){
-    //     this._state.mainPageData.newPostText = newPostText
-    //     this.rerenderEntireTree(this._state)
-    // },
     dispatch(action){
         if(action.type === 'ADD-POST'){
             let post = {
@@ -113,6 +110,19 @@ let store: StoreType = {
 
         } else if(action.type === 'UPDATE-NEW-POST-TEXT'){
             this._state.mainPageData.newPostText = action.newPostText
+            this.rerenderEntireTree(this._state)
+
+        } else if (action.type === 'ADD-CHAT-POST') {
+            let post = {
+                id: v1(),
+                message: this._state.chatData.newChatPostText
+            }
+            this._state.chatData.userMessagesList.unshift(post)
+            this._state.chatData.newChatPostText = ''
+            this.rerenderEntireTree(this._state)
+
+        } else  if (action.type === 'UPDATE-NEW-CHAT-TEXT'){
+            this._state.chatData.newChatPostText = action.newChatPostText
             this.rerenderEntireTree(this._state)
         }
     }
