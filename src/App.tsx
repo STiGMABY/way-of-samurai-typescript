@@ -5,13 +5,14 @@ import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
 import {Route} from 'react-router-dom';
 import MainPage from "./components/MainPage/MainPage";
-import {RootStateType} from "./state";
+import {ActionsType, RootStateType} from "./state";
 import MyChat from "./components/MyChat/MyChat";
 
 type PropsType = {
     state: RootStateType
-    addPost: () => void
-    updateNewPostText: (newPostText: string) => void
+    dispatch: (action: ActionsType) => void
+    // addPost: () => void
+    // updateNewPostText: (newPostText: string) => void
 }
 
 function App(props: PropsType) {
@@ -27,8 +28,9 @@ function App(props: PropsType) {
 
                 <Route path='/content'
                        render={() => <MainPage
-                           updateNewPostText={props.updateNewPostText}
-                           addPost={props.addPost}
+                           dispatch={props.dispatch}
+                           // updateNewPostText={props.updateNewPostText}
+                           // addPost={props.addPost}
                            mainPageData={props.state.mainPageData}/>}/>
 
                 <Route path='/messages'

@@ -11,11 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/state-old.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/done.txt" beforeDir="false" afterPath="$PROJECT_DIR$/done.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/render.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +118,8 @@
       <workItem from="1598961739253" duration="1427000" />
       <workItem from="1599044522184" duration="7761000" />
       <workItem from="1599060596024" duration="17158000" />
-      <workItem from="1599108772921" duration="5690000" />
+      <workItem from="1599108772921" duration="11373000" />
+      <workItem from="1599221185854" duration="4163000" />
     </task>
     <servers />
   </component>
@@ -154,22 +156,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598972710723" />
-    <state width="1343" height="178" key="GridCell.Tab.0.bottom" timestamp="1599116940508">
+    <state width="1343" height="178" key="GridCell.Tab.0.bottom" timestamp="1599138367508">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599116940508" />
-    <state width="1343" height="178" key="GridCell.Tab.0.center" timestamp="1599116940494">
+    <state width="1343" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599138367508" />
+    <state width="1343" height="178" key="GridCell.Tab.0.center" timestamp="1599138367508">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599116940494" />
-    <state width="1343" height="178" key="GridCell.Tab.0.left" timestamp="1599116940463">
+    <state width="1343" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599138367508" />
+    <state width="1343" height="178" key="GridCell.Tab.0.left" timestamp="1599138367507">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599116940463" />
-    <state width="1343" height="178" key="GridCell.Tab.0.right" timestamp="1599116940494">
+    <state width="1343" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599138367507" />
+    <state width="1343" height="178" key="GridCell.Tab.0.right" timestamp="1599138367508">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599116940494" />
+    <state width="1343" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599138367508" />
     <state x="450" y="0" width="916" height="717" key="SettingsEditor" timestamp="1598943623704">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

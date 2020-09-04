@@ -1,11 +1,13 @@
 import logo from "../../../images/logo.svg";
 import React from "react";
 import s from './MainPageInterface.module.css'
+import {ActionsType} from "../../../state";
 
 type PropsType ={
-    addPost: () => void
+    dispatch: (action: ActionsType) => void
     newPostText: string
-    updateNewPostText: (newPostText: string) => void
+    // addPost: () => void
+    // updateNewPostText: (newPostText: string) => void
 }
 
 export function MainPageInterface(props: PropsType) {
@@ -14,12 +16,14 @@ export function MainPageInterface(props: PropsType) {
 
     let addPost = () => {
         //let text = newPostElement.current.value
-        props.addPost()
+        // props.addPost()
+        props.dispatch({type: "ADD-POST"})
     }
 
     let onPostChange = () => {
         let updateNewPostText = newPostElement.current.value
-        props.updateNewPostText(updateNewPostText)
+        // props.updateNewPostText(updateNewPostText)
+        props.dispatch({type: "UPDATE-NEW-POST-TEXT", newPostText: updateNewPostText})
     }
 
     return (

@@ -13,8 +13,9 @@ let rerenderEntireTree = (state: any) => {
                 <App
                     //Если мы сразу не вызываем, что то из store, то это нужно привязать (bind)
                     state={store.getState()}
-                    addPost={store.addPost.bind(store)}
-                    updateNewPostText={store.updateNewPostText.bind(store)}
+                    dispatch={store.dispatch.bind(store)}
+                    // addPost={store.addPost.bind(store)}
+                    // updateNewPostText={store.updateNewPostText.bind(store)}
                 />
             </React.StrictMode>
         </BrowserRouter>, document.getElementById('root')

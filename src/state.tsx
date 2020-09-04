@@ -33,10 +33,26 @@ export type RootStateType = {
 
 export type StoreType = {
     _state: RootStateType
-
+    rerenderEntireTree: (state:any) => void
+    getState: () => RootStateType
+    subscribe: (observer: any) => void
+    // addPost: () => void
+    // updateNewPostText: (newPostText: string) => void
+    dispatch: (action: ActionsType) => void
 }
 
-let store = {
+type AddPostActionType = {
+    type: 'ADD-POST'
+}
+
+type UpdateNewPostTextType = {
+    type: 'UPDATE-NEW-POST-TEXT'
+    newPostText: string
+}
+
+export type ActionsType = AddPostActionType | UpdateNewPostTextType
+
+let store: StoreType = {
     _state: {
         mainPageData: {
             mainPagePostsList: [
@@ -61,28 +77,44 @@ let store = {
             ]
         }
     },
-    getState(){
-        return this._state
-    },
     rerenderEntireTree(state: any) {
         console.log('state changed')
     },
-    addPost(){
-        let post = {
-            id: v1(),
-            message: this._state.mainPageData.newPostText,
-            likesCount: 0
-        }
-        this._state.mainPageData.mainPagePostsList.unshift(post)
-        this._state.mainPageData.newPostText = ''
-        this.rerenderEntireTree(this._state)
-    },
-    updateNewPostText(newPostText: string){
-        this._state.mainPageData.newPostText = newPostText
-        this.rerenderEntireTree(this._state)
+    getState(){
+        return this._state
     },
     subscribe(observer: any) {
         this.rerenderEntireTree = observer
+    },
+    // addPost(){
+    //     let post = {
+    //         id: v1(),
+    //         message: this._state.mainPageData.newPostText,
+    //         likesCount: 0
+    //     }
+    //     this._state.mainPageData.mainPagePostsList.unshift(post)
+    //     this._state.mainPageData.newPostText = ''
+    //     this.rerenderEntireTree(this._state)
+    // },
+    // updateNewPostText(newPostText: string){
+    //     this._state.mainPageData.newPostText = newPostText
+    //     this.rerenderEntireTree(this._state)
+    // },
+    dispatch(action){
+        if(action.type === 'ADD-POST'){
+            let post = {
+                id: v1(),
+                message: this._state.mainPageData.newPostText,
+                likesCount: 0
+            }
+            this._state.mainPageData.mainPagePostsList.unshift(post)
+            this._state.mainPageData.newPostText = ''
+            this.rerenderEntireTree(this._state)
+
+        } else if(action.type === 'UPDATE-NEW-POST-TEXT'){
+            this._state.mainPageData.newPostText = action.newPostText
+            this.rerenderEntireTree(this._state)
+        }
     }
 }
 
