@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
 import {Route} from 'react-router-dom';
 import MainPage from "./components/MainPage/MainPage";
-import {ActionsType, RootStateType} from "./state";
+import {ActionsType, RootStateType} from "./redux/state";
 import MyChat from "./components/MyChat/MyChat";
 
 type PropsType = {

@@ -1,4 +1,6 @@
 import {v1} from "uuid";
+import {mainPageReducer} from "./main-page-reducer";
+import {myChatReducer} from "./my-chat-reducer";
 
 export type MainPagePostsListType = {
     id: string
@@ -37,8 +39,6 @@ export type StoreType = {
     rerenderEntireTree: (state:any) => void
     getState: () => RootStateType
     subscribe: (observer: any) => void
-    // addPost: () => void
-    // updateNewPostText: (newPostText: string) => void
     dispatch: (action: ActionsType) => void
 }
 
@@ -98,33 +98,10 @@ let store: StoreType = {
         this.rerenderEntireTree = observer
     },
     dispatch(action){
-        if(action.type === 'ADD-POST'){
-            let post = {
-                id: v1(),
-                message: this._state.mainPageData.newPostText,
-                likesCount: 0
-            }
-            this._state.mainPageData.mainPagePostsList.unshift(post)
-            this._state.mainPageData.newPostText = ''
-            this.rerenderEntireTree(this._state)
 
-        } else if(action.type === 'UPDATE-NEW-POST-TEXT'){
-            this._state.mainPageData.newPostText = action.newPostText
-            this.rerenderEntireTree(this._state)
-
-        } else if (action.type === 'ADD-CHAT-POST') {
-            let post = {
-                id: v1(),
-                message: this._state.chatData.newChatPostText
-            }
-            this._state.chatData.userMessagesList.unshift(post)
-            this._state.chatData.newChatPostText = ''
-            this.rerenderEntireTree(this._state)
-
-        } else  if (action.type === 'UPDATE-NEW-CHAT-TEXT'){
-            this._state.chatData.newChatPostText = action.newChatPostText
-            this.rerenderEntireTree(this._state)
-        }
+        this._state.mainPageData = mainPageReducer(this._state.mainPageData, action)
+        this._state.chatData = myChatReducer(this._state.chatData, action)
+        this.rerenderEntireTree(this._state)
     }
 }
 

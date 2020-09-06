@@ -11,13 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/my-chat-reducer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePosts.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyChat/MyChat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyChat/MyChat.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +32,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -58,22 +61,22 @@
     <property name="ts.external.directory.path" value="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\NavBar" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Header" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Footer" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content" />
-    </key>
-    <key name="es6.move.members.recent.items">
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content\ContentInterface\ContentInterface.tsx" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts\MainPagePostItem" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\images" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content\ContentInterface\ContentInterface.tsx" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\redux" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\NavBar" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Header" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Footer" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -120,7 +123,10 @@
       <workItem from="1599060596024" duration="17158000" />
       <workItem from="1599108772921" duration="11373000" />
       <workItem from="1599221185854" duration="10316000" />
-      <workItem from="1599244652525" duration="4345000" />
+      <workItem from="1599244652525" duration="5460000" />
+      <workItem from="1599291490304" duration="592000" />
+      <workItem from="1599325452072" duration="3540000" />
+      <workItem from="1599378720843" duration="3526000" />
     </task>
     <servers />
   </component>

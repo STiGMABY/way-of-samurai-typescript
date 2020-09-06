@@ -1,7 +1,7 @@
 import logo from "../../../images/logo.svg";
 import React from "react";
 import s from './MainPageInterface.module.css'
-import {ActionsType} from "../../../state";
+import {ActionsType} from "../../../redux/state";
 
 type PropsType ={
     dispatch: (action: ActionsType) => void

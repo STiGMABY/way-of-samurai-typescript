@@ -1,5 +1,5 @@
 import React from "react";
-import {MainPagePostsListType} from "../../../state";
+import {MainPagePostsListType} from "../../../redux/state";
 import MainPagePostItem from "./MainPagePostItem/MainPagePostItem";
 
 type PropsType = {

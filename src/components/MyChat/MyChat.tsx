@@ -1,6 +1,6 @@
 import React from "react";
 import s from './MyChat.module.css'
-import {ActionsType, ChatDataType} from "../../state";
+import {ActionsType, ChatDataType} from "../../redux/state";
 import DialogItem from "./DialogItem/DialogItem";
 import MessageItem from "./MessageItem/MessageItem";
 
