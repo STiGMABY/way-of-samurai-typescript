@@ -11,16 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/my-chat-reducer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/done.txt" beforeDir="false" afterPath="$PROJECT_DIR$/done.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePosts.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyChat/MyChat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyChat/MyChat.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/my-chat-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/my-chat-reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +36,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="CSS File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -126,7 +131,13 @@
       <workItem from="1599244652525" duration="5460000" />
       <workItem from="1599291490304" duration="592000" />
       <workItem from="1599325452072" duration="3540000" />
-      <workItem from="1599378720843" duration="3526000" />
+      <workItem from="1599378720843" duration="5909000" />
+      <workItem from="1599804706009" duration="2998000" />
+      <workItem from="1599807848870" duration="3216000" />
+      <workItem from="1599848747602" duration="786000" />
+      <workItem from="1599849785644" duration="447000" />
+      <workItem from="1599925658896" duration="2952000" />
+      <workItem from="1599982430422" duration="4248000" />
     </task>
     <servers />
   </component>

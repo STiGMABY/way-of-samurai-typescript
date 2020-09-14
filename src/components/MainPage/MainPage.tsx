@@ -1,7 +1,7 @@
 import React from 'react';
 import {MainPageInterface} from "./MainPageInterface/MainPageInterface";
 import MainPagePosts from "./MainPagePosts/MainPagePosts";
-import {ActionsType, MainPageDataType} from "../../redux/state";
+import {ActionsType, MainPageDataType} from "../../redux/store";
 
 type PropsType = {
     mainPageData: MainPageDataType
