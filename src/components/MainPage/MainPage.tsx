@@ -1,7 +1,7 @@
 import React from 'react';
-import {MainPageInterface} from "./MainPageInterface/MainPageInterface";
 import MainPagePosts from "./MainPagePosts/MainPagePosts";
 import {ActionsType, MainPageDataType} from "../../redux/store";
+import {MainPageInterfaceContainer} from "./MainPageInterface/MainPageInterfaceContainer";
 
 type PropsType = {
     mainPageData: MainPageDataType
@@ -11,7 +11,7 @@ type PropsType = {
 function MainPage(props: PropsType) {
     return (
         <div >
-            <MainPageInterface
+            <MainPageInterfaceContainer
                 newPostText={props.mainPageData.newPostText}
                 dispatch={props.dispatch}
             />

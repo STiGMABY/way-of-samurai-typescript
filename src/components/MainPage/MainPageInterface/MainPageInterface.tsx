@@ -4,7 +4,8 @@ import s from './MainPageInterface.module.css'
 import {ActionsType} from "../../../redux/store";
 
 type PropsType ={
-    dispatch: (action: ActionsType) => void
+    addPost: () => void
+    onPostChange: (post: string) => void
     newPostText: string
 }
 
@@ -13,12 +14,12 @@ export function MainPageInterface(props: PropsType) {
     let newPostElement: React.RefObject<any> = React.createRef()
 
     let addPost = () => {
-        props.dispatch({type: "ADD-POST"})
+        props.addPost()
     }
 
     let onPostChange = () => {
         let updateNewPostText = newPostElement.current.value
-        props.dispatch({type: "UPDATE-NEW-POST-TEXT", newPostText: updateNewPostText})
+        props.onPostChange(updateNewPostText)
     }
 
     return (

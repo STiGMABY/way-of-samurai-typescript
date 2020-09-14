@@ -11,21 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterfaceContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MyChat/MyChatContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/done.txt" beforeDir="false" afterPath="$PROJECT_DIR$/done.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyChat/MyChat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyChat/MyChat.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/my-chat-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/my-chat-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/MyChat" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -66,22 +56,22 @@
     <property name="ts.external.directory.path" value="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts\MainPagePostItem" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\images" />
-    </key>
-    <key name="es6.move.members.recent.items">
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content\ContentInterface\ContentInterface.tsx" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\redux" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\NavBar" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Header" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Footer" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content\ContentInterface\ContentInterface.tsx" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MyChat" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPageInterface" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts\MainPagePostItem" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
