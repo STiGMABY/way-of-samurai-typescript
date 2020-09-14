@@ -6,7 +6,8 @@ import MessageItem from "./MessageItem/MessageItem";
 
 type PropsType = {
     chatData: ChatDataType
-    dispatch: (action: ActionsType) => void
+    addChatPost: () => void
+    onChatPostChange: (post: string) => void
 }
 
 function MyChat(props: PropsType) {
@@ -14,12 +15,12 @@ function MyChat(props: PropsType) {
     let newChatPostElement: React.RefObject<any> = React.createRef()
 
     const addChatPost = () => {
-        props.dispatch({type: "ADD-CHAT-POST"})
+        props.addChatPost()
     }
 
     const onChatPostChange = () => {
         let updateNewChatPostText = newChatPostElement.current.value
-        props.dispatch({type: "UPDATE-NEW-CHAT-TEXT", newChatPostText: updateNewChatPostText})
+        props.onChatPostChange(updateNewChatPostText)
     }
 
     return(

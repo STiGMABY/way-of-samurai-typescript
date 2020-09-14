@@ -8,6 +8,7 @@ import MainPage from "./components/MainPage/MainPage";
 import {ActionsType} from "./redux/store";
 import MyChat from "./components/MyChat/MyChat";
 import {AppStateType} from "./redux/redux-store";
+import MyChatContainer from "./components/MyChat/MyChatContainer";
 
 type PropsType = {
     //state: RootStateType
@@ -32,7 +33,7 @@ function App(props: PropsType) {
                            mainPageData={props.state.mainPageReducer}/>}/>
 
                 <Route path='/messages'
-                       render={() => <MyChat
+                       render={() => <MyChatContainer
                            dispatch={props.dispatch}
                            chatData={props.state.myChatReducer}/>}/>
             </div>

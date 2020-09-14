@@ -1,7 +1,6 @@
 import logo from "../../../images/logo.svg";
 import React from "react";
 import s from './MainPageInterface.module.css'
-import {ActionsType} from "../../../redux/store";
 
 type PropsType ={
     addPost: () => void
