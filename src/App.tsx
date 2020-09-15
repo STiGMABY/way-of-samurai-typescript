@@ -5,15 +5,15 @@ import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
 import {Route} from 'react-router-dom';
 import MainPage from "./components/MainPage/MainPage";
-import {ActionsType} from "./redux/store";
+import {ActionsType, StoreType} from "./redux/store";
 import MyChat from "./components/MyChat/MyChat";
 import {AppStateType} from "./redux/redux-store";
 import MyChatContainer from "./components/MyChat/MyChatContainer";
 
 type PropsType = {
     //state: RootStateType
-    state: AppStateType
-    dispatch: (action: ActionsType) => void
+    // state: AppStateType
+    // dispatch: (action: ActionsType) => void
 }
 
 function App(props: PropsType) {
@@ -29,13 +29,13 @@ function App(props: PropsType) {
 
                 <Route path='/content'
                        render={() => <MainPage
-                           dispatch={props.dispatch}
-                           mainPageData={props.state.mainPageReducer}/>}/>
+                       />}
+                />
 
                 <Route path='/messages'
                        render={() => <MyChatContainer
-                           dispatch={props.dispatch}
-                           chatData={props.state.myChatReducer}/>}/>
+                       />}
+                />
             </div>
             <div className='grid-item footer'>
                 <Footer/>

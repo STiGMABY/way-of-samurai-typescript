@@ -1,4 +1,4 @@
-import {combineReducers, createStore} from 'redux'
+import {combineReducers, createStore, Store} from 'redux'
 import {mainPageReducer} from "./main-page-reducer";
 import {myChatReducer} from "./my-chat-reducer";
 
@@ -13,4 +13,4 @@ let reducers  = combineReducers({
     myChatReducer: myChatReducer
 })
 
-export let store = createStore(reducers)
+export let store: Store = createStore(reducers)
