@@ -2,7 +2,7 @@ import React from "react";
 import {MainPageInterface} from "./MainPageInterface";
 import {connect} from "react-redux";
 import {Dispatch} from 'redux'
-import {AppStateType, store} from "../../../redux/redux-store";
+import {AppStateType} from "../../../redux/redux-store";
 
 type PropsType = {
 }

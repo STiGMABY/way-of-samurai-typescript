@@ -17,8 +17,8 @@ function NavBar() {
                 <a href="#">News</a>
             </div>
 
-            <div>
-                <a href="#">Album</a>
+            <div className={s.item}>
+                <NavLink to="/users" activeClassName={s.activeLink}>Users</NavLink>
             </div>
 
             <div>

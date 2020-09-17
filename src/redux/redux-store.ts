@@ -1,6 +1,7 @@
 import {combineReducers, createStore, Store} from 'redux'
 import {mainPageReducer} from "./main-page-reducer";
 import {myChatReducer} from "./my-chat-reducer";
+import {usersReducer} from "./users-reducer";
 
 // type RootReducerType = typeof reducers
 // export type AppStateType = ReturnType<RootReducerType>
@@ -10,7 +11,8 @@ export type AppStateType = ReturnType<typeof reducers>
 
 let reducers  = combineReducers({
     mainPageReducer: mainPageReducer,
-    myChatReducer: myChatReducer
+    myChatReducer: myChatReducer,
+    usersPage: usersReducer
 })
 
 export let store: Store = createStore(reducers)
