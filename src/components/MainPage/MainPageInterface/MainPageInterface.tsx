@@ -2,7 +2,7 @@ import logo from "../../../images/logo.svg";
 import React from "react";
 import s from './MainPageInterface.module.css'
 
-type PropsType ={
+type PropsType = {
     addPost: () => void
     onPostChange: (post: string) => void
     newPostText: string
@@ -10,15 +10,17 @@ type PropsType ={
 
 export function MainPageInterface(props: PropsType) {
 
-    let newPostElement: React.RefObject<any> = React.createRef()
+    let newPostElement: React.RefObject<HTMLTextAreaElement> = React.createRef()
 
     let addPost = () => {
         props.addPost()
     }
 
     let onPostChange = () => {
-        let updateNewPostText = newPostElement.current.value
-        props.onPostChange(updateNewPostText)
+        if (newPostElement.current) {
+            let updateNewPostText = newPostElement.current.value
+            props.onPostChange(updateNewPostText)
+        }
     }
 
     return (
@@ -31,11 +33,11 @@ export function MainPageInterface(props: PropsType) {
             <div>
                 <textarea
                     value={props.newPostText}
-                    onChange={ onPostChange }
-                    ref={newPostElement} />
+                    onChange={onPostChange}
+                    ref={newPostElement}/>
             </div>
             <div>
-                <button onClick={ addPost }>Опубликовать</button>
+                <button onClick={addPost}>Опубликовать</button>
             </div>
         </div>
     )

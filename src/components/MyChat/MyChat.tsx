@@ -1,6 +1,6 @@
 import React from "react";
 import s from './MyChat.module.css'
-import {ActionsType, ChatDataType} from "../../redux/store";
+import {ChatDataType} from "../../redux/store";
 import DialogItem from "./DialogItem/DialogItem";
 import MessageItem from "./MessageItem/MessageItem";
 
@@ -12,26 +12,28 @@ type PropsType = {
 
 function MyChat(props: PropsType) {
 
-    let newChatPostElement: React.RefObject<any> = React.createRef()
+    let newChatPostElement: React.RefObject<HTMLTextAreaElement> = React.createRef()
 
     const addChatPost = () => {
         props.addChatPost()
     }
 
     const onChatPostChange = () => {
-        let updateNewChatPostText = newChatPostElement.current.value
-        props.onChatPostChange(updateNewChatPostText)
+        if (newChatPostElement.current) {
+            let updateNewChatPostText = newChatPostElement.current.value
+            props.onChatPostChange(updateNewChatPostText)
+        }
     }
 
-    return(
+    return (
         <div className={s.myChatWrapper}>
             <div className={s.dialogs}>
                 {
                     props.chatData.userDialogsList.map(e => {
-                        return(
+                        return (
                             <DialogItem
                                 id={e.id}
-                                userName={e.userName} />
+                                userName={e.userName}/>
                         )
                     })
                 }
@@ -40,10 +42,10 @@ function MyChat(props: PropsType) {
             <div className={s.messages}>
                 {
                     props.chatData.userMessagesList.map(e => {
-                        return(
+                        return (
                             <MessageItem
                                 id={e.id}
-                                message={e.message} />
+                                message={e.message}/>
                         )
                     })
                 }
@@ -51,8 +53,8 @@ function MyChat(props: PropsType) {
                     <textarea
                         value={props.chatData.newChatPostText}
                         ref={newChatPostElement}
-                        onChange={ onChatPostChange }/>
-                    <button onClick={ addChatPost }>Send</button>
+                        onChange={onChatPostChange}/>
+                    <button onClick={addChatPost}>Send</button>
                 </div>
             </div>
         </div>

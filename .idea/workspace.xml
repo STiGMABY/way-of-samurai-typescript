@@ -11,16 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/StoreContext.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePostsContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/done.txt" beforeDir="false" afterPath="$PROJECT_DIR$/done.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterfaceContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterfaceContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePostsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPagePosts/MainPagePostsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyChat/MyChat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyChat/MyChat.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyChat/MyChatContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyChat/MyChatContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/my-chat-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/my-chat-reducer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -135,7 +138,10 @@
       <workItem from="1599849785644" duration="447000" />
       <workItem from="1599925658896" duration="2952000" />
       <workItem from="1599982430422" duration="4248000" />
-      <workItem from="1600148482586" duration="11914000" />
+      <workItem from="1600148482586" duration="23320000" />
+      <workItem from="1600239727653" duration="11651000" />
+      <workItem from="1600266994287" duration="47000" />
+      <workItem from="1600321541798" duration="1302000" />
     </task>
     <servers />
   </component>
@@ -160,6 +166,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
+    <state x="308" y="41" key="#Inspections" timestamp="1600169827032">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="41" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1600169827032" />
     <state x="282" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598733646974">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -172,22 +182,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598972710723" />
-    <state width="1343" height="176" key="GridCell.Tab.0.bottom" timestamp="1600152776899">
+    <state width="1343" height="176" key="GridCell.Tab.0.bottom" timestamp="1600199545618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600152776899" />
-    <state width="1343" height="176" key="GridCell.Tab.0.center" timestamp="1600152776898">
+    <state width="1343" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600199545618" />
+    <state width="1343" height="176" key="GridCell.Tab.0.center" timestamp="1600199545617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600152776898" />
-    <state width="1343" height="176" key="GridCell.Tab.0.left" timestamp="1600152776898">
+    <state width="1343" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600199545617" />
+    <state width="1343" height="176" key="GridCell.Tab.0.left" timestamp="1600199545617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600152776898" />
-    <state width="1343" height="176" key="GridCell.Tab.0.right" timestamp="1600152776898">
+    <state width="1343" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600199545617" />
+    <state width="1343" height="176" key="GridCell.Tab.0.right" timestamp="1600199545617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600152776898" />
+    <state width="1343" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600199545617" />
     <state x="450" y="0" width="916" height="717" key="SettingsEditor" timestamp="1598943623704">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -200,9 +210,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1598880659365" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598733515618">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600253811586">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598733515618" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600253811586" />
   </component>
 </project>

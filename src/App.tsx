@@ -5,15 +5,10 @@ import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
 import {Route} from 'react-router-dom';
 import MainPage from "./components/MainPage/MainPage";
-import {ActionsType, StoreType} from "./redux/store";
-import MyChat from "./components/MyChat/MyChat";
-import {AppStateType} from "./redux/redux-store";
-import MyChatContainer from "./components/MyChat/MyChatContainer";
+import {MyChatContainer} from "./components/MyChat/MyChatContainer";
 
 type PropsType = {
-    //state: RootStateType
-    // state: AppStateType
-    // dispatch: (action: ActionsType) => void
+
 }
 
 function App(props: PropsType) {
