@@ -2,6 +2,8 @@ import React from "react";
 import {v1} from "uuid";
 import {UsersListPageType} from "../../redux/users-reducer";
 import s from './Users.module.css'
+import axios from 'axios'
+import defAva from '../../assets/images/defAva.png'
 
 export type UsersPropsType = {
     users: Array<UsersListPageType>
@@ -12,58 +14,22 @@ export type UsersPropsType = {
 
 export const Users = (props: UsersPropsType) => {
 
-    if (props.users.length === 0) {
-        props.setUsers([
-            {
-                id: v1(),
-                fotoUrl: '',
-                followed: false,
-                fullName: 'Andrei',
-                status: 'I am a boss',
-                location: {city: 'Grodno', country: 'Belarus'}
-            },
-            {
-                id: v1(),
-                fotoUrl: '',
-                followed: true,
-                fullName: 'Lera',
-                status: 'I am maid',
-                location: {city: 'Grodno', country: 'Belarus'}
-            },
-            {
-                id: v1(),
-                fotoUrl: '',
-                followed: true,
-                fullName: 'Musia',
-                status: 'I am a cat',
-                location: {city: 'Boston', country: 'USA'}
-            },
-            {
-                id: v1(),
-                fotoUrl: '',
-                followed: false,
-                fullName: 'Vasia',
-                status: 'Just a guy',
-                location: {city: 'Berlin', country: 'Germany'}
-            },
-            {
-                id: v1(),
-                fotoUrl: '',
-                followed: false,
-                fullName: 'Kolia',
-                status: 'No info',
-                location: {city: 'Belastok', country: 'Poland'}
-            },
-        ])
+    const showUsers = () => {
+        if (props.users.length === 0) {
+            axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+                props.setUsers(response.data.items)
+            })
+        }
     }
 
     return (
         <div>
+            <button onClick={showUsers}>Show users</button>
             {
-                props.users.map(u => <div key={u.id}>
+                props.users.map((u: any) => <div key={u.id}>
                     <span>
-                        <div className={s.userFoto}>
-                            <img src={u.fotoUrl} alt={'avatar'}/>
+                        <div className={s.photos}>
+                            <img src={u.photos.small !== null ? u.photos.small : defAva } alt={'avatar'}/>
                         </div>
                         <div>
                             {
@@ -79,11 +45,12 @@ export const Users = (props: UsersPropsType) => {
                     </span>
                     <span>
                         <span>
-                            <div>{u.fullName}</div><div>{u.status}</div>
+                            <div>{u.name}</div>
+                            <div>{u.status}</div>
                         </span>
                         <span>
-                            <div>{u.location.country}</div>
-                            <div>{u.location.city}</div>
+                            <div>{'u.location.country'}</div>
+                            <div>{'u.location.city'}</div>
                         </span>
                     </span>
                 </div>)

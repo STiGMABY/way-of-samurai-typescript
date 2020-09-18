@@ -4,7 +4,7 @@ const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET-USERS'
 
-type ActionsType = FollowUserType | UnfollowUserType | SetUsersType
+export type ActionsType = FollowUserType | UnfollowUserType | SetUsersType
 
 type FollowUserType = {
     type: 'FOLLOW'
@@ -53,11 +53,11 @@ export const usersReducer = (state: InitialStateType = initialState, action: Act
     switch (action.type) {
         case "FOLLOW":
             return {
-                ...state,
+                ...state, //делаем копию всего стейта
                 //users: [...state, users], тоже самое что запись ниже
-                users: state.users.map(u => {
+                users: state.users.map(u => { //делаем копию users
                     if(u.id === action.userID){
-                        return {...u, followed: true}
+                        return {...u, followed: true} //делаем копию юзера которого нужно поменять
                     }
                     return u
                 })
