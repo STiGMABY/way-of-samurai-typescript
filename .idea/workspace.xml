@@ -11,14 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Users/Users-old-func-com.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/userFoto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/userFoto.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +26,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -59,22 +55,22 @@
     <property name="ts.external.directory.path" value="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Users" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\redux" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MyChat" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPageInterface" />
-    </key>
-    <key name="es6.move.members.recent.items">
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content\ContentInterface\ContentInterface.tsx" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\assets\images" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\redux" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\NavBar" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Header" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content\ContentInterface\ContentInterface.tsx" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Users" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\redux" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MyChat" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPageInterface" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -137,7 +133,7 @@
       <workItem from="1600321541798" duration="16743000" />
       <workItem from="1600343078827" duration="8606000" />
       <workItem from="1600366595813" duration="4706000" />
-      <workItem from="1600409065402" duration="7878000" />
+      <workItem from="1600409065402" duration="12521000" />
     </task>
     <servers />
   </component>
@@ -170,10 +166,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="282" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1598733646974" />
-    <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599070002821">
+    <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600428019692">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599070002821" />
+    <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600428019692" />
     <state x="462" y="117" key="FileChooserDialogImpl" timestamp="1598972710723">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

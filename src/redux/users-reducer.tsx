@@ -1,5 +1,3 @@
-import {v1} from "uuid";
-
 const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET-USERS'
@@ -18,45 +16,39 @@ type UnfollowUserType = {
 
 type SetUsersType = {
     type: 'SET-USERS'
-    users: Array<UsersListPageType>
-}
-
-type UserLocationType = {
-    city: string
-    country: string
-}
-
-export type UsersListPageType = {
-    id: string
-    fotoUrl: string
-    followed: boolean
-    fullName: string
-    status: string
-    location: UserLocationType
+    users: Array<UserType>
 }
 
 type InitialStateType = {
-    users: Array<UsersListPageType>
+    users: Array<UserType>
 }
+
+export type UserType
+    = {
+    name: string
+    id: string
+    uniqueUrlName: string | null
+    photos: {
+        small: string
+        large: string
+    }
+    status: string
+    followed: boolean
+}
+
 
 let initialState = {
-    users:   [
-        // {id: v1(), fotoUrl: '', followed: false, fullName: 'Andrei',status: 'I am a boss',location: {city: 'Grodno', country: 'Belarus'}},
-        // {id: v1(), fotoUrl: '', followed: true, fullName: 'Lera',status: 'I am maid',location: {city: 'Grodno', country: 'Belarus'}},
-        // {id: v1(), fotoUrl: '', followed: true, fullName: 'Musia', status: 'I am a cat', location: {city: 'Boston', country: 'USA'}},
-        // {id: v1(), fotoUrl: '', followed: false, fullName: 'Vasia',status: 'Just a guy',location: {city: 'Berlin', country: 'Germany'}},
-        // {id: v1(), fotoUrl: '', followed: false, fullName: 'Kolia',status: 'No info',location: {city: 'Belastok', country: 'Poland'}},
-    ]
+    users: []
 }
 
-export const usersReducer = (state: InitialStateType = initialState, action: ActionsType) => {
+export const usersReducer = (state: InitialStateType = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
         case "FOLLOW":
             return {
                 ...state, //делаем копию всего стейта
                 //users: [...state, users], тоже самое что запись ниже
                 users: state.users.map(u => { //делаем копию users
-                    if(u.id === action.userID){
+                    if (u.id === action.userID) {
                         return {...u, followed: true} //делаем копию юзера которого нужно поменять
                     }
                     return u
@@ -67,7 +59,7 @@ export const usersReducer = (state: InitialStateType = initialState, action: Act
                 ...state,
                 //users: [...state, users], тоже самое что запись ниже
                 users: state.users.map(u => {
-                    if(u.id === action.userID){
+                    if (u.id === action.userID) {
                         return {...u, followed: false}
                     }
                     return u
@@ -83,4 +75,4 @@ export const usersReducer = (state: InitialStateType = initialState, action: Act
 
 export const followAC = (userID: string) => ({type: FOLLOW, userID})
 export const unfollowAC = (userID: string) => ({type: UNFOLLOW, userID})
-export const setUsersAC = (users: Array<UsersListPageType>) => ({type: SET_USERS, users})
+export const setUsersAC = (users: Array<UserType>) => ({type: SET_USERS, users})
