@@ -1,3 +1,15 @@
 .photos img{
     width: 50px;
 }
+
+.normalPage{
+    font-weight: bold;
+    font-size: 2em;
+    margin: 5px;
+    padding: 0 5px;
+    border: 1px solid;
+}
+
+.selectedPage{
+    color: gold;
+}
