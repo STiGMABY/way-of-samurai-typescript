@@ -3,8 +3,13 @@ const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET-USERS'
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT'
+const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 
-export type ActionsType = FollowUserType | UnfollowUserType | SetUsersType | SetCurrentPageType | TotalUsersCountType
+export type ActionsType = FollowUserType |
+    UnfollowUserType |
+    SetUsersType | SetCurrentPageType |
+    TotalUsersCountType |
+    IsFetchingType
 
 type FollowUserType = {
     type: 'FOLLOW'
@@ -28,12 +33,17 @@ type TotalUsersCountType = {
     type: 'SET_TOTAL_USERS_COUNT'
     count: number
 }
+type IsFetchingType = {
+    type: 'TOGGLE_IS_FETCHING'
+    isFetching: boolean
+}
 
 type InitialStateType = {
     users: Array<UserType>
     pageSize: number
     totalUsersCount: number
     currentPage: number
+    isFetching: boolean
 }
 
 export type UserType
@@ -55,7 +65,8 @@ let initialState = {
     pageSize: 5,
     totalUsersCount: 0,
     currentPage: 4,
-    count: 0
+    count: 0,
+    isFetching: false
 }
 
 export const usersReducer = (state: InitialStateType = initialState, action: ActionsType): InitialStateType => {
@@ -86,10 +97,13 @@ export const usersReducer = (state: InitialStateType = initialState, action: Act
             return {...state, users: action.users}
         }
         case 'SET_CURRENT_PAGE': {
-             return {...state, currentPage: action.currentPage}
+            return {...state, currentPage: action.currentPage}
         }
         case 'SET_TOTAL_USERS_COUNT': {
-             return {...state, totalUsersCount: action.count}
+            return {...state, totalUsersCount: action.count}
+        }
+        case 'TOGGLE_IS_FETCHING': {
+            return {...state, isFetching: action.isFetching}
         }
         default:
             return state
@@ -101,3 +115,4 @@ export const unfollowAC = (userID: string) => ({type: UNFOLLOW, userID})
 export const setUsersAC = (users: Array<UserType>) => ({type: SET_USERS, users})
 export const setCurrentPageAC = (currentPage: number) => ({type: SET_CURRENT_PAGE, currentPage})
 export const setUsersTotalCountAC = (totalUsersCount: number) => ({type: SET_TOTAL_USERS_COUNT, count: totalUsersCount})
+export const toggleIsFetchingAC = (isFetching: boolean) => ({type: TOGGLE_IS_FETCHING, isFetching})

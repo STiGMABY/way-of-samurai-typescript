@@ -14,6 +14,8 @@ export type UsersPropsType = {
     setUsers: (users: Array<UserType>) => void
     setCurrentPage: (currantPage: number) => void
     setTotalUsersCount: (totalCount: number) => void
+    toggleIsFetching: (isFetching: boolean) => void
+    isFetching: boolean
 
 }
 
@@ -27,7 +29,9 @@ export function Users(props: UsersPropsType) {
 
     const onPageChanged = (pageNumber: number) => {
         props.setCurrentPage(pageNumber)
+        props.toggleIsFetching(true)
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${props.pageSize}`).then(response => {
+            props.toggleIsFetching(false)
             props.setUsers(response.data.items)
         })
     }
@@ -35,6 +39,7 @@ export function Users(props: UsersPropsType) {
 
     return(
         <div>
+            //Пагинация
             {pages.map( p => {
                 return <span className={ props.currentPage === p ? s.selectedPage + ' ' + s.normalPage : s.normalPage }
                              onClick={ () => { onPageChanged(p) }}>{p}</span>
