@@ -1,5 +1,5 @@
 import React from "react";
-import s from './Users.module.css'
+import s from './UsersContainer.module.css'
 import axios from 'axios'
 import defAva from '../../assets/images/defAva.png'
 import { UserType } from "../../redux/users-reducer";

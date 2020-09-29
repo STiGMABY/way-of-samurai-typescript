@@ -6,7 +6,8 @@ import Header from "./components/Header/Header";
 import {Route} from 'react-router-dom';
 import MainPage from "./components/MainPage/MainPage";
 import {MyChatContainer} from "./components/MyChat/MyChatContainer";
-import {UsersContainer} from "./components/Users/UsersContainer";
+import UsersContainer from "./components/Users/UsersContainer";
+
 
 type PropsType = {
 
