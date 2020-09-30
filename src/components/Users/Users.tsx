@@ -39,7 +39,7 @@ export function Users(props: UsersPropsType) {
 
     return(
         <div>
-            //Пагинация
+            {/*Пагинация*/}
             {pages.map( p => {
                 return <span className={ props.currentPage === p ? s.selectedPage + ' ' + s.normalPage : s.normalPage }
                              onClick={ () => { onPageChanged(p) }}>{p}</span>
