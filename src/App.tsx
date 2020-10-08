@@ -4,9 +4,9 @@ import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
 import {Route} from 'react-router-dom';
-import MainPage from "./components/MainPage/MainPage";
 import {MyChatContainer} from "./components/MyChat/MyChatContainer";
 import UsersContainer from "./components/Users/UsersContainer";
+import MainPageContainer from "./components/MainPage/MainPageContainer";
 
 
 type PropsType = {
@@ -25,7 +25,7 @@ function App(props: PropsType) {
             <div className='grid-item content'>
 
                 <Route path='/content'
-                       render={() => <MainPage
+                       render={() => <MainPageContainer
                        />}
                 />
 

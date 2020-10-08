@@ -5,11 +5,12 @@ const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT'
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 
-export type ActionsType = FollowUserType |
-    UnfollowUserType |
-    SetUsersType | SetCurrentPageType |
-    TotalUsersCountType |
-    IsFetchingType
+export type UsersReducerActionsType =   FollowUserType |
+                            UnfollowUserType |
+                            SetUsersType |
+                            SetCurrentPageType |
+                            TotalUsersCountType |
+                            IsFetchingType
 
 type FollowUserType = {
     type: 'FOLLOW'
@@ -69,7 +70,7 @@ let initialState = {
     isFetching: false
 }
 
-export const usersReducer = (state: InitialStateType = initialState, action: ActionsType): InitialStateType => {
+export const usersReducer = (state: InitialStateType = initialState, action: UsersReducerActionsType): InitialStateType => {
     switch (action.type) {
         case "FOLLOW":
             return {

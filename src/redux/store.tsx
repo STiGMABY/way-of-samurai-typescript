@@ -1,5 +1,5 @@
 import {v1} from "uuid";
-import {mainPageReducer} from "./main-page-reducer";
+import {mainPageReducer, SetUserProfileType} from "./main-page-reducer";
 import {myChatReducer} from "./my-chat-reducer";
 
 export type MainPagePostsListType = {
@@ -20,8 +20,8 @@ export type UserMessagesListType = {
 
 export type MainPageDataType = {
     mainPagePostsList: Array<MainPagePostsListType>
-    newPostText: string
-
+    newPostText: string,
+    profile: any
 }
 export type ChatDataType = {
     userDialogsList: Array<UserDialogsListType>
@@ -42,15 +42,6 @@ export type StoreType = {
     dispatch: (action: ActionsType) => void
 }
 
-type AddPostActionType = {
-    type: 'ADD-POST'
-}
-
-type UpdateNewPostTextType = {
-    type: 'UPDATE-NEW-POST-TEXT'
-    newPostText: string
-}
-
 type AddChatActionType = {
     type: 'ADD-CHAT-POST'
 }
@@ -60,7 +51,7 @@ type UpdateNewChatText = {
     newChatPostText: string
 }
 
-export type ActionsType = AddPostActionType | UpdateNewPostTextType | AddChatActionType | UpdateNewChatText
+export type ActionsType =  any
 
 let store: StoreType = {
     _state: {
@@ -72,7 +63,8 @@ let store: StoreType = {
                 {id: v1(), message: 'Have a nice day', likesCount: 9},
                 {id: v1(), message: 'Lern hard!', likesCount: 6}
             ],
-            newPostText: ''
+            newPostText: '',
+            profile: {}
         },
         chatData: {
             userDialogsList: [

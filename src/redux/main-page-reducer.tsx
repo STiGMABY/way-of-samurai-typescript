@@ -1,5 +1,24 @@
 import {v1} from "uuid";
-import {ActionsType, MainPageDataType} from "./store";
+import {MainPageDataType} from "./store";
+
+const SET_USER_PROFILE = 'SET_USER_PROFILE'
+
+type AddPostActionType = {
+    type: 'ADD-POST'
+}
+type UpdateNewPostTextType = {
+    type: 'UPDATE-NEW-POST-TEXT'
+    newPostText: string
+}
+export type SetUserProfileType = {
+    type: 'SET_USER_PROFILE',
+    profile: {}
+}
+
+type MainPageReducerActionTypes =
+    | AddPostActionType
+    | UpdateNewPostTextType
+    | SetUserProfileType
 
 let initialState = {
     mainPagePostsList: [
@@ -9,10 +28,11 @@ let initialState = {
         {id: v1(), message: 'Have a nice day', likesCount: 9},
         {id: v1(), message: 'Lern hard!', likesCount: 6}
     ],
-    newPostText: ''
+    newPostText: '',
+    profile: null
 }
 
-export const mainPageReducer = (state: MainPageDataType = initialState, action: ActionsType) => {
+export const mainPageReducer = (state: MainPageDataType = initialState, action: MainPageReducerActionTypes) => {
     switch (action.type) {
         case "ADD-POST": {
             let post = {
@@ -34,7 +54,11 @@ export const mainPageReducer = (state: MainPageDataType = initialState, action: 
             stateCopy.newPostText = action.newPostText
             return stateCopy
         }
+        case SET_USER_PROFILE:
+            return {...state, profile: action.profile}
         default:
             return state
     }
 }
+
+export const setUserProfile = (profile: any): SetUserProfileType => ({type: SET_USER_PROFILE, profile})

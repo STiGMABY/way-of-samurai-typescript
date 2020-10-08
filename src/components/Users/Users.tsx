@@ -3,6 +3,7 @@ import s from "./UsersContainer.module.css";
 import defAva from "../../assets/images/defAva.png";
 import {UserType} from "../../redux/users-reducer";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 export type UsersPropsType = {
     users: Array<UserType>
@@ -49,7 +50,9 @@ export function Users(props: UsersPropsType) {
                 props.users.map(u => <div key={u.id}>
                     <span>
                         <div className={s.photos}>
-                            <img src={u.photos.small !== null ? u.photos.small : defAva} alt={'avatar'}/>
+                            <NavLink to={'/content/' + u.id}>
+                                <img src={u.photos.small !== null ? u.photos.small : defAva} alt={'avatar'}/>
+                            </NavLink>
                         </div>
                         <div>
                             {
