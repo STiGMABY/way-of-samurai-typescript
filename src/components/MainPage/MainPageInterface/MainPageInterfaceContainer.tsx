@@ -4,9 +4,6 @@ import {connect} from "react-redux";
 import {Dispatch} from 'redux'
 import {AppStateType} from "../../../redux/redux-store";
 
-type PropsType = {
-}
-
 // export function MainPageInterfaceContainer(props: PropsType) {
 //
 //     return (
@@ -49,6 +46,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
             dispatch({type: "UPDATE-NEW-POST-TEXT", newPostText: updateNewPostText})
         }
     }
+
 }
 
 export const MainPageInterfaceContainer = connect(mapStateToProps, mapDispatchToProps) (MainPageInterface)

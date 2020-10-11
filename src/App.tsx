@@ -24,7 +24,7 @@ function App(props: PropsType) {
             </div>
             <div className='grid-item content'>
 
-                <Route path='/content'
+                <Route path='/content/:userId?'
                        render={() => <MainPageContainer
                        />}
                 />

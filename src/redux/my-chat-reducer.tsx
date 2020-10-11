@@ -1,8 +1,6 @@
 import {ActionsType, ChatDataType} from "./store";
 import {v1} from "uuid";
 
-
-
 let initialState = {
     userDialogsList: [
         {id: v1(), userName: 'Andrei'},

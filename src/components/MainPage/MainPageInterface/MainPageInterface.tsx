@@ -30,7 +30,6 @@ export function MainPageInterface(props: PropsType) {
     }
 
     return (
-
         <div>
             <div>
                 <img src={props.profile.photos.small} />
