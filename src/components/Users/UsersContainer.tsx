@@ -1,5 +1,4 @@
 import React from "react";
-import {Dispatch} from "redux";
 import {connect} from "react-redux";
 import {
     follow,
@@ -11,8 +10,8 @@ import {
 } from "../../redux/users-reducer";
 import {AppStateType} from "../../redux/redux-store";
 import {Users, UsersPropsType} from "./Users";
-import axios from "axios";
 import preloader from '../../assets/images/preloader.gif'
+import {usersAPI} from "../../api/api";
 
 class UsersContainer extends React.Component<UsersPropsType> {
 
@@ -23,18 +22,19 @@ class UsersContainer extends React.Component<UsersPropsType> {
     componentDidMount() {
         //debugger
         this.props.toggleIsFetching(true)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
-            this.props.toggleIsFetching(false)
-            this.props.setUsers(response.data.items)
-            this.props.setTotalUsersCount(response.data.totalCount = 80)
-        })
+        usersAPI.getUsers(this.props.currentPage, this.props.pageSize)
+            .then(data => {
+                this.props.toggleIsFetching(false)
+                this.props.setUsers(data.items)
+                this.props.setTotalUsersCount(data.totalCount = 80)
+            })
     }
 
     render(): React.ReactNode {
 
         return <>
             {this.props.isFetching ?
-                <div><img src={preloader}/> </div> : 'null'}
+                <div><img src={preloader}/></div> : 'null'}
             <Users
                 users={this.props.users}
                 pageSize={this.props.pageSize}
@@ -94,4 +94,4 @@ export default connect(mapStateToProps, {
     setCurrentPage,
     setTotalUsersCount,
     toggleIsFetching
-    })(UsersContainer)
+})(UsersContainer)
