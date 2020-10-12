@@ -2,11 +2,11 @@ import React from 'react';
 import './App.css';
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
-import Header from "./components/Header/Header";
 import {Route} from 'react-router-dom';
 import {MyChatContainer} from "./components/MyChat/MyChatContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import MainPageContainer from "./components/MainPage/MainPageContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 
 type PropsType = {
@@ -17,7 +17,7 @@ function App(props: PropsType) {
     return (
         <div className='app-wrapper'>
             <div className='grid-item header'>
-                <Header/>
+                <HeaderContainer/>
             </div>
             <div className='grid-item navbar'>
                 <NavBar/>

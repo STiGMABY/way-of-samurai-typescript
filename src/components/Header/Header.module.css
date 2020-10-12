@@ -1,7 +1,8 @@
-.header img{
-
+.headerWrapper {
+    display: flex;
+    justify-content: flex-end;
 }
-
-.header{
-
+.loginBlock a{
+    color: white;
+    text-decoration: none;
 }
