@@ -1,8 +1,10 @@
-import {combineReducers, createStore, Store} from 'redux'
+import {combineReducers, createStore, Store, applyMiddleware} from 'redux'
 import {mainPageReducer} from "./main-page-reducer";
 import {myChatReducer} from "./my-chat-reducer";
 import {usersReducer} from "./users-reducer";
 import { authReducer } from './auth-reducer';
+import thunkMiddleware from 'redux-thunk'
+
 
 // type RootReducerType = typeof reducers
 // export type AppStateType = ReturnType<RootReducerType>
@@ -17,7 +19,7 @@ let reducers  = combineReducers({
     auth: authReducer
 })
 
-export let store: Store = createStore(reducers)
+export let store: Store = createStore(reducers, applyMiddleware(thunkMiddleware))
 
 // @ts-ignore
 window.store = store
