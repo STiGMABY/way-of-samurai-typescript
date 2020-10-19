@@ -12,13 +12,13 @@
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <list id="a7c4702d-c73a-4417-a1fd-94eac1709af1" name="62 is done" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lessons-from-streams/it-incubator-todolist-ts-13" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -157,7 +157,9 @@
       <workItem from="1602482897922" duration="17953000" />
       <workItem from="1602570053841" duration="9532000" />
       <workItem from="1602612724244" duration="383000" />
-      <workItem from="1602744294528" duration="11757000" />
+      <workItem from="1602744294528" duration="17151000" />
+      <workItem from="1602774176811" duration="132000" />
+      <workItem from="1603087762290" duration="4090000" />
     </task>
     <task id="LOCAL-00001" summary="62 is done">
       <created>1602531713942</created>
@@ -205,10 +207,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1601379009986" />
-    <state x="462" y="117" key="FileChooserDialogImpl" timestamp="1602613124207">
+    <state x="462" y="117" key="FileChooserDialogImpl" timestamp="1602774330543">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602613124207" />
+    <state x="462" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602774330543" />
     <state width="1343" height="176" key="GridCell.Tab.0.bottom" timestamp="1600199545618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

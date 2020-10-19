@@ -1,5 +1,6 @@
 import {v1} from "uuid";
-import {AppStateType} from "./redux-store";
+import {Dispatch} from "redux";
+import {usersAPI} from "../api/api";
 
 const SET_USER_PROFILE = 'SET_USER_PROFILE'
 const ADD_POST = 'ADD-POST'
@@ -97,5 +98,16 @@ export const mainPageReducer = (state = initialState, action: MainPageReducerAct
 }
 
 export const addPost = () => ({type: ADD_POST})
+
 export const updateNewPostTest = (newPostText: string) => ({type: UPDATE_NEW_POST_TEXT, newPostText})
+
 export const setUserProfile = (profile: ProfileType): SetUserProfileType => ({type: SET_USER_PROFILE, profile})
+
+export const getUserProfile = (userId: number) => (dispatch: Dispatch) => {
+    usersAPI.getMainContent(userId)
+        .then(response => {
+            //debugger
+            dispatch(setUserProfile(response.data))
+        })
+}
+
