@@ -3,11 +3,13 @@ import s from './MyChat.module.css'
 import {ChatDataType} from "../../redux/store";
 import DialogItem from "./DialogItem/DialogItem";
 import MessageItem from "./MessageItem/MessageItem";
+import { Redirect } from "react-router-dom";
 
 type PropsType = {
     chatData: ChatDataType
     addChatPost: () => void
     onChatPostChange: (post: string) => void
+    isAuth: boolean
 }
 
 function MyChat(props: PropsType) {
@@ -24,6 +26,8 @@ function MyChat(props: PropsType) {
             props.onChatPostChange(updateNewChatPostText)
         }
     }
+
+    if (!props.isAuth) return <Redirect to={'/login'}/>
 
     return (
         <div className={s.myChatWrapper}>

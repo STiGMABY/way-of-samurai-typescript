@@ -12,9 +12,6 @@ type SetUserDataType = {
         email: string
         login: string
     }
-    // userId: string
-    // email: string
-    // login: string
 }
 
 type InitialStateType = {

@@ -3,7 +3,7 @@ import MainPage from "./MainPage";
 import {connect} from "react-redux";
 import {AppStateType} from "../../redux/redux-store";
 import {getUserProfile} from "../../redux/main-page-reducer";
-import {withRouter} from 'react-router-dom';
+import {withRouter, Redirect} from 'react-router-dom';
 
 class MainPageContainer extends Component<any> {
     componentDidMount(): void {
@@ -16,6 +16,8 @@ class MainPageContainer extends Component<any> {
     }
 
     render(): React.ReactNode {
+        if (!this.props.isAuth) return <Redirect to={'/login'} />
+
         return (
             <div>
                 <MainPage
@@ -27,7 +29,8 @@ class MainPageContainer extends Component<any> {
 }
 
 const mapStateToProps = (state: AppStateType) => ({
-    profile: state.mainPageReducer.profile
+    profile: state.mainPageReducer.profile,
+    isAuth: state.auth.isAuth
 })
 
 let WithUrlDataContainerComponent = withRouter(MainPageContainer)

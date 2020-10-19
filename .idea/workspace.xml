@@ -11,14 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyChat/MyChat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyChat/MyChat.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyChat/MyChatContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyChat/MyChatContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/main-page-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.tsx" afterDir="false" />
     </list>
     <list id="a7c4702d-c73a-4417-a1fd-94eac1709af1" name="62 is done" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +158,7 @@
       <workItem from="1602612724244" duration="383000" />
       <workItem from="1602744294528" duration="17151000" />
       <workItem from="1602774176811" duration="132000" />
-      <workItem from="1603087762290" duration="4090000" />
+      <workItem from="1603087762290" duration="7010000" />
     </task>
     <task id="LOCAL-00001" summary="62 is done">
       <created>1602531713942</created>

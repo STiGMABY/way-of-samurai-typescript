@@ -7,6 +7,7 @@ import {MyChatContainer} from "./components/MyChat/MyChatContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import MainPageContainer from "./components/MainPage/MainPageContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
+import {Login} from "./components/Login/Login";
 
 
 type PropsType = {
@@ -36,6 +37,11 @@ function App(props: PropsType) {
 
                 <Route path='/users'
                        render={() => <UsersContainer
+                       />}
+                />
+
+                <Route path='/login'
+                       render={() => <Login
                        />}
                 />
             </div>

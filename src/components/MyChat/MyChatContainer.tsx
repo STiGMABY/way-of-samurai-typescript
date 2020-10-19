@@ -36,7 +36,8 @@ type PropsType = {}
 
 const mapStateToProps = (state: AppStateType) => {
     return {
-        chatData: state.myChatReducer
+        chatData: state.myChatReducer,
+        isAuth: state.auth.isAuth
     }
 }
 
