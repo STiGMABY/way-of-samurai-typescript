@@ -2,7 +2,9 @@ import React from "react";
 import MyChat from "./MyChat";
 import {AppStateType} from "../../redux/redux-store";
 import {connect} from "react-redux";
-import {Dispatch} from "redux";
+import {Dispatch, compose} from "redux";
+import {Redirect} from "react-router-dom";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 type PropsType = {}
 
@@ -52,4 +54,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
     }
 }
 
-export const MyChatContainer = connect(mapStateToProps, mapDispatchToProps)(MyChat)
+export default compose<React.ComponentClass>(
+    connect(mapStateToProps, mapDispatchToProps),
+    withAuthRedirect,
+)(MyChat)

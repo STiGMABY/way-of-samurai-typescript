@@ -2,13 +2,23 @@ import React, {Component} from 'react';
 import MainPage from "./MainPage";
 import {connect} from "react-redux";
 import {AppStateType} from "../../redux/redux-store";
-import {getUserProfile} from "../../redux/main-page-reducer";
-import {withRouter, Redirect} from 'react-router-dom';
+import {getUserProfile, ProfileType} from "../../redux/main-page-reducer";
+import {withRouter} from 'react-router-dom';
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
+import { compose } from 'redux';
+import {RouteComponentProps} from "react-router";
 
-class MainPageContainer extends Component<any> {
+type OwnProps = {
+
+}
+
+type PropsType = MapStateType & MapDispatchType & OwnProps & RouteComponentProps<{ userId: string }>
+
+
+class MainPageContainer extends Component<PropsType> {
     componentDidMount(): void {
         //debugger
-        let userId = this.props.match.params.userId
+        let userId = +this.props.match.params.userId
         if (!userId) {
             userId = 2
         }
@@ -16,26 +26,35 @@ class MainPageContainer extends Component<any> {
     }
 
     render(): React.ReactNode {
-        if (!this.props.isAuth) return <Redirect to={'/login'} />
-
         return (
             <div>
-                <MainPage
+                {this.props.profile && <MainPage
                     profile={this.props.profile}
-                />
+                />}
             </div>
         );
     }
 }
 
-const mapStateToProps = (state: AppStateType) => ({
+const mapStateToProps = (state: AppStateType): MapStateType => ({
     profile: state.mainPageReducer.profile,
-    isAuth: state.auth.isAuth
+    //isAuth: state.auth.isAuth
 })
 
-let WithUrlDataContainerComponent = withRouter(MainPageContainer)
+type MapStateType = {
+    profile: ProfileType | null
+}
 
-export default connect(mapStateToProps, {getUserProfile})(WithUrlDataContainerComponent)
+type MapDispatchType = {
+    getUserProfile: (userId: number) =>void
+}
+export default compose<React.ComponentClass>(
+    connect<MapStateType, MapDispatchType, OwnProps, AppStateType>(mapStateToProps, {getUserProfile}),
+        withRouter,
+        withAuthRedirect
+)(MainPageContainer)
+
+
 
 // type MapStateType = {
 //     profile: ProfileType | null

@@ -14,7 +14,7 @@ type SetUserDataType = {
     }
 }
 
-type InitialStateType = {
+export type InitialStateType = {
     userId: string | null
     email: string | null
     login: string | null
