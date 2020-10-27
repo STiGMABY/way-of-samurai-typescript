@@ -1,6 +1,7 @@
 import logo from "../../../images/logo.svg";
 import React from "react";
 import s from './MainPageInterface.module.css'
+import {MainPageStatus} from "./MainPageStatus";
 
 type PropsType = {
     addPost: () => void
@@ -38,6 +39,7 @@ export function MainPageInterface(props: PropsType) {
             {/*This is Content!*/}
             <div>
                 <img src={logo} alt="Logo" className={s['contentLogo']}/>
+                <MainPageStatus />
             </div>
             <div>
                 <textarea

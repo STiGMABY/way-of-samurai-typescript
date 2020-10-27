@@ -11,14 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/hoc/withAuthRedirect.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageStatus.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/done.txt" beforeDir="false" afterPath="$PROJECT_DIR$/done.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyChat/MyChatContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyChat/MyChatContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageInterface.tsx" afterDir="false" />
     </list>
     <list id="a7c4702d-c73a-4417-a1fd-94eac1709af1" name="62 is done" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +159,9 @@
       <workItem from="1603087762290" duration="14629000" />
       <workItem from="1603177006375" duration="684000" />
       <workItem from="1603177787188" duration="2614000" />
-      <workItem from="1603183392884" duration="3752000" />
+      <workItem from="1603183392884" duration="5016000" />
+      <workItem from="1603365998373" duration="172000" />
+      <workItem from="1603783105145" duration="3953000" />
     </task>
     <task id="LOCAL-00001" summary="62 is done">
       <created>1602531713942</created>

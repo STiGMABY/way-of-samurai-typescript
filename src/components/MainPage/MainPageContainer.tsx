@@ -51,7 +51,7 @@ type MapDispatchType = {
 export default compose<React.ComponentClass>(
     connect<MapStateType, MapDispatchType, OwnProps, AppStateType>(mapStateToProps, {getUserProfile}),
         withRouter,
-        withAuthRedirect
+        //withAuthRedirect
 )(MainPageContainer)
 
 
