@@ -4,16 +4,17 @@ import s from './MainPageInterface.module.css'
 import {MainPageStatus} from "./MainPageStatus";
 
 type PropsType = {
-    addPost: () => void
-    onPostChange: (post: string) => void
-    newPostText: string
-    profile: any
+     addPost: () => void
+    updateNewPostText: (post: string) => void
+     newPostText: string
+     profile: any
+     status: any
 }
 
 export function MainPageInterface(props: PropsType) {
     //debugger
-   //let www = props.profile
-    if(!props.profile){
+    //let www = props.profile
+    if (!props.profile) {
         return null
     }
 
@@ -26,20 +27,20 @@ export function MainPageInterface(props: PropsType) {
     let onPostChange = () => {
         if (newPostElement.current) {
             let updateNewPostText = newPostElement.current.value
-            props.onPostChange(updateNewPostText)
+            props.updateNewPostText(updateNewPostText)
         }
     }
 
     return (
         <div>
             <div>
-                <img src={props.profile.photos.small} />
+                <img src={props.profile.photos.small}/>
             </div>
             <span>{props.profile.fullName}</span>
             {/*This is Content!*/}
             <div>
                 <img src={logo} alt="Logo" className={s['contentLogo']}/>
-                <MainPageStatus />
+                <MainPageStatus status={props.status}/>
             </div>
             <div>
                 <textarea

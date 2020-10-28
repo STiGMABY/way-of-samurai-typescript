@@ -21,7 +21,7 @@ export type UserMessagesListType = {
 export type MainPageDataType = {
     mainPagePostsList: Array<MainPagePostsListType>
     newPostText: string,
-    profile: any
+    profile: any,
 }
 export type ChatDataType = {
     userDialogsList: Array<UserDialogsListType>
@@ -91,9 +91,9 @@ let store: StoreType = {
     },
     dispatch(action){
 
-        this._state.mainPageData = mainPageReducer(this._state.mainPageData, action)
-        this._state.chatData = myChatReducer(this._state.chatData, action)
-        this.rerenderEntireTree(this._state)
+        // this._state.mainPageData = mainPageReducer(this._state.mainPageData, action)
+        // this._state.chatData = myChatReducer(this._state.chatData, action)
+        // this.rerenderEntireTree(this._state)
     }
 }
 

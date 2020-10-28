@@ -19,7 +19,7 @@ export class MainPageStatus extends Component<any, any> {
             <div>
                 {
                     !this.state.editMode
-                        ? <div onDoubleClick={this.activateEditMode.bind(this)}><span>This is my status</span></div>
+                        ? <div onDoubleClick={this.activateEditMode.bind(this)}><span>Your status is: {this.props.status}</span></div>
                         : <div onBlur={this.deativateEditMode.bind(this)}><input autoFocus={true} type="text"/></div>
                 }
             </div>

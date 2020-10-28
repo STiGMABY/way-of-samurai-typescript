@@ -1,10 +1,11 @@
 import {v1} from "uuid";
 import {Dispatch} from "redux";
-import {usersAPI} from "../api/api";
+import {MainContentAPI, usersAPI} from "../api/api";
 
 const SET_USER_PROFILE = 'SET_USER_PROFILE'
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
+const SET_STATUS = 'SET_STATUS'
 
 type AddPostActionType = {
     type: 'ADD-POST'
@@ -18,10 +19,16 @@ export type SetUserProfileType = {
     profile: ProfileType
 }
 
+type SetUserStatusType = {
+    type: 'SET_STATUS',
+    status: string
+}
+
 type MainPageReducerActionTypes =
     | AddPostActionType
     | UpdateNewPostTextType
     | SetUserProfileType
+    | SetUserStatusType
 
 type MainPagePostsListType = {
     id: string
@@ -36,13 +43,13 @@ export type ProfileType = {
     fullName: string
     contacts: {
         github: string
-        vk:string
+        vk: string
         facebook: string
         instagram: string
         twitter: string
         website: string
         youtube: string
-        mainLink:string
+        mainLink: string
     }
     photos: {
         small: string
@@ -53,7 +60,8 @@ export type ProfileType = {
 export type initialStateType = {
     mainPagePostsList: Array<MainPagePostsListType>
     newPostText: string,
-    profile: null | ProfileType
+    profile: null | ProfileType,
+    status: string
 }
 
 let initialState: initialStateType = {
@@ -65,10 +73,11 @@ let initialState: initialStateType = {
         {id: v1(), message: 'Lern hard!', likesCount: 6}
     ],
     newPostText: '',
-    profile: null
+    profile: null,
+    status: ''
 }
 
-export const mainPageReducer = (state = initialState, action: MainPageReducerActionTypes): initialStateType=> {
+export const mainPageReducer = (state = initialState, action: MainPageReducerActionTypes): initialStateType => {
     switch (action.type) {
         case ADD_POST: {
             let post = {
@@ -92,22 +101,48 @@ export const mainPageReducer = (state = initialState, action: MainPageReducerAct
         }
         case SET_USER_PROFILE:
             return {...state, profile: action.profile}
+        case SET_STATUS: {
+            return {
+                ...state,
+                status: action.status
+            }
+        }
         default:
             return state
     }
 }
 
-export const addPost = () => ({type: ADD_POST})
+export const addPost = (): AddPostActionType => ({type: ADD_POST})
 
-export const updateNewPostTest = (newPostText: string) => ({type: UPDATE_NEW_POST_TEXT, newPostText})
+export const updateNewPostText = (newPostText: string): UpdateNewPostTextType => ({type: UPDATE_NEW_POST_TEXT, newPostText})
 
 export const setUserProfile = (profile: ProfileType): SetUserProfileType => ({type: SET_USER_PROFILE, profile})
+
+export const setStatus = (status: any): SetUserStatusType => ({type: SET_STATUS, status})
 
 export const getUserProfile = (userId: number) => (dispatch: Dispatch) => {
     usersAPI.getMainContent(userId)
         .then(response => {
             //debugger
             dispatch(setUserProfile(response.data))
+        })
+}
+
+export const getStatus = (userId: number) => (dispatch: Dispatch) => {
+    MainContentAPI.getStatus(userId)
+        .then(response => {
+            debugger
+            dispatch(setStatus(response.data))
+        })
+}
+
+export const updateStatus = (status: any) => (dispatch: Dispatch) => {
+    MainContentAPI.updateStatus(status)
+        .then(response => {
+            //debugger
+            if (response.data.resultCode === 0) {
+                dispatch(setStatus(status))
+            }
         })
 }
 

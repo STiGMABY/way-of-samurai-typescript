@@ -2,9 +2,15 @@ import React, {Component} from 'react';
 import MainPage from "./MainPage";
 import {connect} from "react-redux";
 import {AppStateType} from "../../redux/redux-store";
-import {getUserProfile, ProfileType} from "../../redux/main-page-reducer";
+import {
+    addPost,
+    getStatus,
+    getUserProfile,
+    ProfileType,
+    updateNewPostText,
+    updateStatus
+} from "../../redux/main-page-reducer";
 import {withRouter} from 'react-router-dom';
-import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import { compose } from 'redux';
 import {RouteComponentProps} from "react-router";
 
@@ -23,6 +29,7 @@ class MainPageContainer extends Component<PropsType> {
             userId = 2
         }
         this.props.getUserProfile(userId)
+        this.props.getStatus(userId)
     }
 
     render(): React.ReactNode {
@@ -30,6 +37,11 @@ class MainPageContainer extends Component<PropsType> {
             <div>
                 {this.props.profile && <MainPage
                     profile={this.props.profile}
+                    status={this.props.status}
+                    newPostText={this.props.newPostText}
+                    updateStatus={this.props.updateStatus}
+                    addPost={this.props.addPost}
+                    updateNewPostText={this.props.updateNewPostText}
                 />}
             </div>
         );
@@ -38,18 +50,29 @@ class MainPageContainer extends Component<PropsType> {
 
 const mapStateToProps = (state: AppStateType): MapStateType => ({
     profile: state.mainPageReducer.profile,
+    status: state.mainPageReducer.status,
+    newPostText: state.mainPageReducer.newPostText,
     //isAuth: state.auth.isAuth
 })
 
 type MapStateType = {
     profile: ProfileType | null
+    status: string
+    newPostText: string
 }
 
 type MapDispatchType = {
     getUserProfile: (userId: number) =>void
+    getStatus: (userId: number) => void
+    updateStatus: (status: any) => void
+    addPost: ()=> void
+    updateNewPostText:(newPostText: string) => void
 }
 export default compose<React.ComponentClass>(
-    connect<MapStateType, MapDispatchType, OwnProps, AppStateType>(mapStateToProps, {getUserProfile}),
+    connect<MapStateType,
+        MapDispatchType,
+        OwnProps,
+        AppStateType>(mapStateToProps, {getUserProfile, getStatus, updateStatus, addPost, updateNewPostText}),
         withRouter,
         //withAuthRedirect
 )(MainPageContainer)

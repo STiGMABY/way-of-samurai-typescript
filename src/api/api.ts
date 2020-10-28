@@ -23,7 +23,20 @@ export const usersAPI = {
     },
 
     getMainContent(userId: number){
+        console.warn('Outdated method, Pls use MainContentAPI object')
+        return MainContentAPI.getMainContent(userId)
+    }
+}
+
+export const MainContentAPI = {
+    getMainContent(userId: number){
         return instance.get(`profile/` + userId)
+    },
+    getStatus(userId: number){
+        return instance.get(`profile/status/` + userId)
+    },
+    updateStatus(status: JSON){
+        return instance.put(`profile/status`, {status: status})
     }
 }
 
