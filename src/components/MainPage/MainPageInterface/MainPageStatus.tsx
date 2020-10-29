@@ -1,26 +1,40 @@
-import React, {Component} from "react";
+import React, {Component, RefObject, ChangeEvent} from "react";
 
 export class MainPageStatus extends Component<any, any> {
+
     state = {
-        editMode: false
+        editMode: false,
+        status: this.props.status
     }
-    activateEditMode(){
+    activateEditMode = () => {
         this.setState({
             editMode: true
         })
     }
-    deativateEditMode(){
+
+    deativateEditMode() {
         this.setState({
             editMode: false
         })
+        this.props.updateStatus(this.state.status)
     }
+
+    onStatusChange = (e: ChangeEvent<HTMLInputElement>) => {
+        this.setState({status: e.currentTarget.value})
+    }
+
     render(): React.ReactNode {
         return (
             <div>
                 {
                     !this.state.editMode
-                        ? <div onDoubleClick={this.activateEditMode.bind(this)}><span>Your status is: {this.props.status}</span></div>
-                        : <div onBlur={this.deativateEditMode.bind(this)}><input autoFocus={true} type="text"/></div>
+                        ? <div onDoubleClick={this.activateEditMode}>
+                            <span>Your status is: {this.props.status}</span>
+                        </div>
+
+                        : <div onBlur={this.deativateEditMode.bind(this)}>
+                            <input onChange={this.onStatusChange} autoFocus={true} type="text" value={this.state.status}/>
+                        </div>
                 }
             </div>
         )

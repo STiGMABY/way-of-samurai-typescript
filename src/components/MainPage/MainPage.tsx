@@ -24,6 +24,7 @@ function MainPage(props: PropsType) {
                 newPostText={props.newPostText}
                 profile={props.profile}
                 status={props.status}
+                updateStatus={props.updateStatus}
             />
             <MainPagePostsContainer />
         </div>

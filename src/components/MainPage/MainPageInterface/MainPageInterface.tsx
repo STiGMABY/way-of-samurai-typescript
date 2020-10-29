@@ -4,11 +4,12 @@ import s from './MainPageInterface.module.css'
 import {MainPageStatus} from "./MainPageStatus";
 
 type PropsType = {
-     addPost: () => void
+    addPost: () => void
     updateNewPostText: (post: string) => void
-     newPostText: string
-     profile: any
-     status: any
+    newPostText: string
+    profile: any
+    status: any
+    updateStatus: (status: any) => void
 }
 
 export function MainPageInterface(props: PropsType) {
@@ -40,7 +41,7 @@ export function MainPageInterface(props: PropsType) {
             {/*This is Content!*/}
             <div>
                 <img src={logo} alt="Logo" className={s['contentLogo']}/>
-                <MainPageStatus status={props.status}/>
+                <MainPageStatus status={props.status} updateStatus={props.updateStatus}/>
             </div>
             <div>
                 <textarea
