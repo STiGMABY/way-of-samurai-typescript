@@ -23,6 +23,14 @@ export class MainPageStatus extends Component<any, any> {
         this.setState({status: e.currentTarget.value})
     }
 
+    componentDidUpdate(prevProps: Readonly<any>, prevState: Readonly<any>, snapshot?: any): void {
+        if (prevProps.status !== this.props.status){
+            this.setState({
+                status: this.props.status
+            })
+        }
+    }
+
     render(): React.ReactNode {
         return (
             <div>
