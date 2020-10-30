@@ -38,7 +38,7 @@ class MainPageContainer extends Component<PropsType> {
                 {this.props.profile && <MainPage
                     profile={this.props.profile}
                     status={this.props.status}
-                    newPostText={this.props.newPostText}
+                    //newPostText={this.props.newPostText}
                     updateStatus={this.props.updateStatus}
                     addPost={this.props.addPost}
                     updateNewPostText={this.props.updateNewPostText}
@@ -51,21 +51,21 @@ class MainPageContainer extends Component<PropsType> {
 const mapStateToProps = (state: AppStateType): MapStateType => ({
     profile: state.mainPageReducer.profile,
     status: state.mainPageReducer.status,
-    newPostText: state.mainPageReducer.newPostText,
+    //newPostText: state.mainPageReducer.newPostText,
     //isAuth: state.auth.isAuth
 })
 
 type MapStateType = {
     profile: ProfileType | null
     status: string
-    newPostText: string
+    //newPostText: string
 }
 
 type MapDispatchType = {
     getUserProfile: (userId: number) =>void
     getStatus: (userId: number) => void
     updateStatus: (status: any) => void
-    addPost: ()=> void
+    addPost: (newChatMessage: string)=> void
     updateNewPostText:(newPostText: string) => void
 }
 export default compose<React.ComponentClass>(

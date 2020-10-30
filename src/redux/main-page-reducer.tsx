@@ -8,7 +8,8 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
 const SET_STATUS = 'SET_STATUS'
 
 type AddPostActionType = {
-    type: 'ADD-POST'
+    type: 'ADD-POST',
+    newMamePageMessage: string
 }
 type UpdateNewPostTextType = {
     type: 'UPDATE-NEW-POST-TEXT'
@@ -59,7 +60,6 @@ export type ProfileType = {
 
 export type initialStateType = {
     mainPagePostsList: Array<MainPagePostsListType>
-    newPostText: string,
     profile: null | ProfileType,
     status: string
 }
@@ -72,7 +72,6 @@ let initialState: initialStateType = {
         {id: v1(), message: 'Have a nice day', likesCount: 9},
         {id: v1(), message: 'Lern hard!', likesCount: 6}
     ],
-    newPostText: '',
     profile: null,
     status: ''
 }
@@ -82,7 +81,7 @@ export const mainPageReducer = (state = initialState, action: MainPageReducerAct
         case ADD_POST: {
             let post = {
                 id: v1(),
-                message: state.newPostText,
+                message: action.newMamePageMessage,
                 likesCount: 0
             }
             //redux не понимает, что мы что то изменили внутри стейта, для него стейт остался тем же.
@@ -91,12 +90,7 @@ export const mainPageReducer = (state = initialState, action: MainPageReducerAct
             let stateCopy = {...state} //делаем копию стейта (поверхностная)
             stateCopy.mainPagePostsList = [...state.mainPagePostsList] //создаем новый массив равный старому (глубокая)
             stateCopy.mainPagePostsList.unshift(post)
-            stateCopy.newPostText = ''
-            return stateCopy
-        }
-        case UPDATE_NEW_POST_TEXT: {
-            let stateCopy = {...state}
-            stateCopy.newPostText = action.newPostText
+            //stateCopy.newPostText = ''
             return stateCopy
         }
         case SET_USER_PROFILE:
@@ -112,7 +106,7 @@ export const mainPageReducer = (state = initialState, action: MainPageReducerAct
     }
 }
 
-export const addPost = (): AddPostActionType => ({type: ADD_POST})
+export const addPost = (newMamePageMessage: string): AddPostActionType => ({type: ADD_POST, newMamePageMessage})
 
 export const updateNewPostText = (newPostText: string): UpdateNewPostTextType => ({type: UPDATE_NEW_POST_TEXT, newPostText})
 

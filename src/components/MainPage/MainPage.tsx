@@ -1,5 +1,4 @@
 import React from 'react';
-import {MainPageInterfaceContainer} from "./MainPageInterface/MainPageInterfaceContainer";
 import {MainPagePostsContainer} from "./MainPagePosts/MainPagePostsContainer";
 import {ProfileType} from "../../redux/main-page-reducer";
 import {MainPageInterface} from "./MainPageInterface/MainPageInterface";
@@ -8,8 +7,8 @@ type PropsType = {
     profile: ProfileType
     status: any
     updateStatus: any
-    newPostText: string
-    addPost: () => void
+    //newPostText: string
+    addPost: (newMamePageMessage: string) => void
     updateNewPostText: (newPostText: string) => void
 }
 
@@ -21,7 +20,7 @@ function MainPage(props: PropsType) {
             <MainPageInterface
                 addPost={props.addPost}
                 updateNewPostText={props.updateNewPostText}
-                newPostText={props.newPostText}
+                //newPostText={props.newPostText}
                 profile={props.profile}
                 status={props.status}
                 updateStatus={props.updateStatus}

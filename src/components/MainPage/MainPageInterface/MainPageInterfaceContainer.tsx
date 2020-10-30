@@ -32,7 +32,7 @@ import {AppStateType} from "../../../redux/redux-store";
 
 const mapStateToProps = (state: AppStateType) => {
     return {
-        newPostText: state.mainPageReducer.newPostText,
+        //newPostText: state.mainPageReducer.newPostText,
         profile: state.mainPageReducer.profile
     }
 }
