@@ -131,7 +131,7 @@ export const getUserProfile = (userId: number) => (dispatch: Dispatch) => {
 export const getStatus = (userId: number) => (dispatch: Dispatch) => {
     MainContentAPI.getStatus(userId)
         .then(response => {
-            debugger
+            //debugger
             dispatch(setStatus(response.data))
         })
 }

@@ -24,6 +24,7 @@ export const LoginReduxForm = reduxForm({
 })(LoginForm)
 
 export const Login = () => {
+
     const onSubmit = (formData: any) => {
         console.log(formData)
     }

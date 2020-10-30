@@ -2,9 +2,9 @@ import React from "react";
 import MyChat from "./MyChat";
 import {AppStateType} from "../../redux/redux-store";
 import {connect} from "react-redux";
-import {Dispatch, compose} from "redux";
-import {Redirect} from "react-router-dom";
+import {compose, Dispatch} from "redux";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
+import {AddChatPostAC} from "../../redux/my-chat-reducer";
 
 type PropsType = {}
 
@@ -45,11 +45,8 @@ const mapStateToProps = (state: AppStateType) => {
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
-        addChatPost: () => {
-            dispatch({type: "ADD-CHAT-POST"})
-        },
-        onChatPostChange: (updateNewChatPostText: string) => {
-            dispatch({type: "UPDATE-NEW-CHAT-TEXT", newChatPostText: updateNewChatPostText})
+        addChatPost: (newMessageBody: string) => {
+            dispatch(AddChatPostAC(newMessageBody))
         }
     }
 }

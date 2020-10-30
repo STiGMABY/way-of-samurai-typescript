@@ -3,28 +3,23 @@ import s from './MyChat.module.css'
 import {ChatDataType} from "../../redux/store";
 import DialogItem from "./DialogItem/DialogItem";
 import MessageItem from "./MessageItem/MessageItem";
-import { Redirect } from "react-router-dom";
+import {Redirect} from "react-router-dom";
+import {Field, reduxForm} from "redux-form";
 
 type PropsType = {
     chatData: ChatDataType
-    addChatPost: () => void
+    addChatPost: (newMessageBody:string) => void
     onChatPostChange: (post: string) => void
     isAuth: boolean
 }
 
 function MyChat(props: PropsType) {
 
-    let newChatPostElement: React.RefObject<HTMLTextAreaElement> = React.createRef()
+    //let newChatPostElement: React.RefObject<HTMLTextAreaElement> = React.createRef()
 
-    const addChatPost = () => {
-        props.addChatPost()
-    }
-
-    const onChatPostChange = () => {
-        if (newChatPostElement.current) {
-            let updateNewChatPostText = newChatPostElement.current.value
-            props.onChatPostChange(updateNewChatPostText)
-        }
+    const AddNewMessage = (value: any) => {
+        //alert(value.newMessageBody)
+        props.addChatPost(value.newMessageBody)
     }
 
     if (!props.isAuth) return <Redirect to={'/login'}/>
@@ -53,16 +48,28 @@ function MyChat(props: PropsType) {
                         )
                     })
                 }
-                <div>
-                    <textarea
-                        value={props.chatData.newChatPostText}
-                        ref={newChatPostElement}
-                        onChange={onChatPostChange}/>
-                    <button onClick={addChatPost}>Send</button>
-                </div>
+                <AddMessageFormRedux onSubmit={AddNewMessage}/>
             </div>
         </div>
     )
 }
+
+const AddMessageForm = (props: any) => {
+
+    return (
+        <form onSubmit={props.handleSubmit}>
+            <div>
+                <Field component={'textarea' } name={'newMessageBody'} placeholder={'Enter your message'}/>
+            </div>
+            <button>Send</button>
+        </form>
+    )
+}
+
+
+const AddMessageFormRedux = reduxForm({
+    // a unique name for the form
+    form: 'myChatAddMessageForm'
+})(AddMessageForm)
 
 export default MyChat

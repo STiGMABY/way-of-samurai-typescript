@@ -1,5 +1,12 @@
-import {ActionsType, ChatDataType} from "./store";
+import {ActionsType, UserDialogsListType, UserMessagesListType} from "./store";
 import {v1} from "uuid";
+
+const ADD_CHAT_POST = 'ADD_CHAT_POST'
+
+export type ChatDataType = {
+    userDialogsList: Array<UserDialogsListType>
+    userMessagesList: Array<UserMessagesListType>
+}
 
 let initialState = {
     userDialogsList: [
@@ -11,29 +18,24 @@ let initialState = {
         {id: v1(), message: 'Hello'},
         {id: v1(), message: 'How are you?'},
         {id: v1(), message: 'Meow'}
-    ],
-    newChatPostText: ''
+    ]
 }
 
 export const myChatReducer = (state: ChatDataType = initialState, action: ActionsType) => {
 
     switch (action.type) {
-        case "ADD-CHAT-POST":
+        case ADD_CHAT_POST:
             let post = {
                 id: v1(),
-                message: state.newChatPostText
+                message: action.newMessageBody
             }
             return { //сразу возвращаем объект
                 ...state,
                 userMessagesList: [post, ...state.userMessagesList], //добавление через spread оператов, вместо push
-                newChatPostText: ''
             }
-        case "UPDATE-NEW-CHAT-TEXT":
-            return {
-                ...state,
-            newChatPostText: action.newChatPostText
-    }
         default:
             return state
     }
 }
+
+export const AddChatPostAC = (newMessageBody: string) => ({type: ADD_CHAT_POST, newMessageBody})
