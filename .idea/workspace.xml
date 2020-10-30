@@ -12,7 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageInterface/MainPageStatus.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <list id="a7c4702d-c73a-4417-a1fd-94eac1709af1" name="62 is done" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lessons-from-streams/it-incubator-todolist-ts-13" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lessons-from-streams/it-incubator-todolist-ts-15" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -160,7 +163,8 @@
       <workItem from="1603365998373" duration="172000" />
       <workItem from="1603783105145" duration="5966000" />
       <workItem from="1603868914088" duration="12290000" />
-      <workItem from="1603961735844" duration="3863000" />
+      <workItem from="1603961735844" duration="4829000" />
+      <workItem from="1604041038194" duration="3118000" />
     </task>
     <task id="LOCAL-00001" summary="62 is done">
       <created>1602531713942</created>
@@ -204,14 +208,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="282" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1598733646974" />
-    <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601379009986">
+    <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604042273404">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1601379009986" />
-    <state x="462" y="117" key="FileChooserDialogImpl" timestamp="1602774330543">
+    <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604042273404" />
+    <state x="462" y="117" key="FileChooserDialogImpl" timestamp="1603970515165">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602774330543" />
+    <state x="462" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603970515165" />
     <state width="1343" height="176" key="GridCell.Tab.0.bottom" timestamp="1600199545618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -244,9 +248,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1603185467580" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602415213150">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604041201983">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602415213150" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604041201983" />
   </component>
 </project>

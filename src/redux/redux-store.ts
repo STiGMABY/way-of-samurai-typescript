@@ -4,6 +4,7 @@ import {myChatReducer} from "./my-chat-reducer";
 import {usersReducer} from "./users-reducer";
 import { authReducer } from './auth-reducer';
 import thunkMiddleware from 'redux-thunk'
+import { reducer as formReducer } from 'redux-form'
 
 
 // type RootReducerType = typeof reducers
@@ -16,7 +17,8 @@ let reducers  = combineReducers({
     mainPageReducer: mainPageReducer,
     myChatReducer: myChatReducer,
     usersPage: usersReducer,
-    auth: authReducer
+    auth: authReducer,
+    form: formReducer
 })
 
 export let store: Store = createStore(reducers, applyMiddleware(thunkMiddleware))
