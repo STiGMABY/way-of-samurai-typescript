@@ -9,7 +9,7 @@ const SET_STATUS = 'SET_STATUS'
 
 type AddPostActionType = {
     type: 'ADD-POST',
-    newMamePageMessage: string
+    newMainPageMessage: string
 }
 type UpdateNewPostTextType = {
     type: 'UPDATE-NEW-POST-TEXT'
@@ -81,7 +81,7 @@ export const mainPageReducer = (state = initialState, action: MainPageReducerAct
         case ADD_POST: {
             let post = {
                 id: v1(),
-                message: action.newMamePageMessage,
+                message: action.newMainPageMessage,
                 likesCount: 0
             }
             //redux не понимает, что мы что то изменили внутри стейта, для него стейт остался тем же.
@@ -106,7 +106,7 @@ export const mainPageReducer = (state = initialState, action: MainPageReducerAct
     }
 }
 
-export const addPost = (newMamePageMessage: string): AddPostActionType => ({type: ADD_POST, newMamePageMessage})
+export const addPost = (newMainPageMessage: string): AddPostActionType => ({type: ADD_POST, newMainPageMessage})
 
 export const updateNewPostText = (newPostText: string): UpdateNewPostTextType => ({type: UPDATE_NEW_POST_TEXT, newPostText})
 

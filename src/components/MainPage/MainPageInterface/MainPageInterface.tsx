@@ -3,9 +3,11 @@ import React from "react";
 import s from './MainPageInterface.module.css'
 import {MainPageStatus} from "./MainPageStatus";
 import {Field, reduxForm} from "redux-form";
+import {maxLengthCreator, required} from "../../../Utils/Validators/validators";
+import {TextArea} from "../../Common/FormsControls/FormControls";
 
 type PropsType = {
-    addPost: (newMamePageMessage: string) => void
+    addPost: (newMainPageMessage: string) => void
     updateNewPostText: (post: string) => void
     //newPostText: string
     profile: any
@@ -13,15 +15,21 @@ type PropsType = {
     updateStatus: (status: any) => void
 }
 
+const maxLength10 = maxLengthCreator(10)
+
 const MainPageInterfaceForm = (props: any) => {
+
     const { handleSubmit } = props
 
     return <form onSubmit={handleSubmit}>
         <div>
-            <Field component={'textarea'} name={'newMamePageMessage'} placeholder={'Enter your message'}/>
+            <Field component={TextArea}
+                   name={'newMamePageMessage'}
+                   placeholder={'Enter your message'}
+                   validate={[required, maxLength10]}/>
         </div>
         <div>
-            <button>Опубликовать</button>
+            <button>Add post</button>
         </div>
     </form>;
 }

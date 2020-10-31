@@ -8,7 +8,7 @@ type PropsType = {
     status: any
     updateStatus: any
     //newPostText: string
-    addPost: (newMamePageMessage: string) => void
+    addPost: (newMainPageMessage: string) => void
     updateNewPostText: (newPostText: string) => void
 }
 

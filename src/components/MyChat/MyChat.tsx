@@ -5,6 +5,8 @@ import DialogItem from "./DialogItem/DialogItem";
 import MessageItem from "./MessageItem/MessageItem";
 import {Redirect} from "react-router-dom";
 import {Field, reduxForm} from "redux-form";
+import {TextArea} from "../Common/FormsControls/FormControls";
+import {maxLengthCreator, required} from "../../Utils/Validators/validators";
 
 type PropsType = {
     chatData: ChatDataType
@@ -54,12 +56,18 @@ function MyChat(props: PropsType) {
     )
 }
 
+const maxLength50 = maxLengthCreator(50)
+
 const AddMessageForm = (props: any) => {
 
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                <Field component={'textarea' } name={'newMessageBody'} placeholder={'Enter your message'}/>
+                <Field component={TextArea}
+                       name={'newMessageBody'}
+                       placeholder={'Enter your message'}
+                       validate={[required, maxLength50]}
+                />
             </div>
             <button>Send</button>
         </form>
