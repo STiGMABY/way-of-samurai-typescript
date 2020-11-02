@@ -26,7 +26,7 @@ class MainPageContainer extends Component<PropsType> {
         //debugger
         let userId = +this.props.match.params.userId
         if (!userId) {
-            userId = 2
+            userId = this.props.authorizedUserId
         }
         this.props.getUserProfile(userId)
         this.props.getStatus(userId)
@@ -51,6 +51,8 @@ class MainPageContainer extends Component<PropsType> {
 const mapStateToProps = (state: AppStateType): MapStateType => ({
     profile: state.mainPageReducer.profile,
     status: state.mainPageReducer.status,
+    authorizedUserId:state.auth.userId,
+    isAuth: state.auth.isAuth
     //newPostText: state.mainPageReducer.newPostText,
     //isAuth: state.auth.isAuth
 })
@@ -58,6 +60,8 @@ const mapStateToProps = (state: AppStateType): MapStateType => ({
 type MapStateType = {
     profile: ProfileType | null
     status: string
+    authorizedUserId: any
+    isAuth: boolean
     //newPostText: string
 }
 

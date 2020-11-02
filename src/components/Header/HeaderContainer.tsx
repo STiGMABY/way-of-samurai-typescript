@@ -2,11 +2,12 @@ import React, {Component} from "react";
 import Header from "./Header";
 import {connect} from "react-redux";
 import {AppStateType} from "../../redux/redux-store";
-import {getUserAuthData} from "../../redux/auth-reducer";
+import {getUserAuthData, logout} from "../../redux/auth-reducer";
 
 
 type PropsType = {
     login: string | null
+    logout: any
     isAuth: boolean
     //setAuthUserData: (userId: string, email: string, login: string) => void
     getUserAuthData: () => void
@@ -34,4 +35,4 @@ const mstp = (state: AppStateType) => ({
     isAuth: state.auth.isAuth
 })
 
-export default connect(mstp, {getUserAuthData})(HeaderContainer)
+export default connect(mstp, {getUserAuthData, logout})(HeaderContainer)
