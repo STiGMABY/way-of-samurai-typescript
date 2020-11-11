@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Header from "./Header";
 import {connect} from "react-redux";
 import {AppStateType} from "../../redux/redux-store";
-import {getUserAuthData, logout} from "../../redux/auth-reducer";
+import {logout} from "../../redux/auth-reducer";
 
 
 type PropsType = {
@@ -10,14 +10,11 @@ type PropsType = {
     logout: any
     isAuth: boolean
     //setAuthUserData: (userId: string, email: string, login: string) => void
-    getUserAuthData: () => void
+    //getUserAuthData: () => void
 }
 
 
 class HeaderContainer extends Component<PropsType> {
-    componentDidMount() {
-        this.props.getUserAuthData()
-    }
 
     render(): React.ReactNode {
         return <Header
@@ -35,4 +32,4 @@ const mstp = (state: AppStateType) => ({
     isAuth: state.auth.isAuth
 })
 
-export default connect(mstp, {getUserAuthData, logout})(HeaderContainer)
+export default connect(mstp, {logout})(HeaderContainer)

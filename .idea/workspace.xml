@@ -11,15 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597c24ab-02d7-4231-8202-bf5a8ef469fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/redux/app-reducer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/FormsControls/FormControls.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/FormsControls/FormControls.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPageContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
     </list>
     <list id="a7c4702d-c73a-4417-a1fd-94eac1709af1" name="62 is done" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lessons-from-streams/it-incubator-todolist-ts-15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,22 +59,22 @@
     <property name="ts.external.directory.path" value="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\assets\images" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\redux" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\NavBar" />
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Header" />
-    </key>
-    <key name="es6.move.members.recent.items">
-      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content\ContentInterface\ContentInterface.tsx" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\redux" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Users" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPagePosts" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MyChat" />
       <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\MainPage\MainPageInterface" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Content\ContentInterface\ContentInterface.tsx" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\assets\images" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\redux" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\NavBar" />
+      <recent name="E:\Download\JavaScript\-IT-ICUBATOR\way-of-samurai-typescript\src\components\Header" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -172,6 +170,10 @@
       <workItem from="1604137773948" duration="3675000" />
       <workItem from="1604223307544" duration="106000" />
       <workItem from="1604302074654" duration="11846000" />
+      <workItem from="1604318036388" duration="227000" />
+      <workItem from="1604827487759" duration="623000" />
+      <workItem from="1605087592678" duration="1902000" />
+      <workItem from="1605092835867" duration="4725000" />
     </task>
     <task id="LOCAL-00001" summary="62 is done">
       <created>1602531713942</created>
@@ -219,10 +221,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604042273404" />
-    <state x="462" y="117" key="FileChooserDialogImpl" timestamp="1603970515165">
+    <state x="462" y="117" key="FileChooserDialogImpl" timestamp="1605089736147">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603970515165" />
+    <state x="462" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605089736147" />
     <state width="1343" height="176" key="GridCell.Tab.0.bottom" timestamp="1600199545618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -255,9 +257,20 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1603185467580" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604311768044">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605100727087">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604311768044" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605100727087" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/app-reducer.tsx</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
