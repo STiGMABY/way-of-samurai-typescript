@@ -2,9 +2,7 @@ import React from "react";
 import s from "./UsersContainer.module.css";
 import defAva from "../../assets/images/defAva.png";
 import {UserType} from "../../redux/users-reducer";
-import axios from "axios";
 import {NavLink} from "react-router-dom";
-import {usersAPI} from "../../api/api";
 
 export type UsersPropsType = {
     users: Array<UserType>
@@ -65,10 +63,14 @@ export function Users(props: UsersPropsType) {
                             {
                                 u.followed
                                     ? <button disabled={props.followingInProgress
-                                        .some(id => id === u.id)} onClick={() => {props.unfollow(u.id)}}>Unfollow</button>
+                                        .some(id => id === u.id)} onClick={() => {
+                                        props.unfollow(u.id)
+                                    }}>Unfollow</button>
 
                                     : <button disabled={props.followingInProgress.some(id => id === u.id)}
-                                              onClick={() => {props.follow(u.id)}}>Follow</button>
+                                              onClick={() => {
+                                                  props.follow(u.id)
+                                              }}>Follow</button>
                             }
                         </div>
                     </span>

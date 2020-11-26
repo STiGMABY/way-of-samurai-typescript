@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import {
     follow,
-    getUsers,
+    requestUsers,
     setCurrentPage,
     setTotalUsersCount,
     setUsers,
@@ -14,6 +14,14 @@ import {Users} from "./Users";
 import preloader from '../../assets/images/preloader.gif'
 import {compose} from "redux";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
+import {
+    getUsers,
+    getCurrantPage,
+    getFollowingInProgress,
+    getIsFetching,
+    getPageSize,
+    getTotalUsersCount
+} from "../../redux/users-selectors";
 
 type OwnProps = {}
 
@@ -81,12 +89,12 @@ class UsersContainer extends React.Component<PropsType> {
 
 let mapStateToProps = (state: AppStateType): MapStateType => {
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
-        followingInProgress: state.usersPage.followingInProgress
+        users: getUsers(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: getTotalUsersCount(state),
+        currentPage: getCurrantPage(state),
+        isFetching: getIsFetching(state),
+        followingInProgress: getFollowingInProgress(state)
     }
 }
 
@@ -152,6 +160,6 @@ export default compose<React.ComponentClass>(
             setUsers,
             setCurrentPage,
             setTotalUsersCount,
-            getUsers
+            getUsers: requestUsers
         },
     ), withAuthRedirect)(UsersContainer)
