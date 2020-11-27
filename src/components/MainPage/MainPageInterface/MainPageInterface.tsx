@@ -5,6 +5,7 @@ import {MainPageStatus} from "./MainPageStatus";
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required} from "../../../Utils/Validators/validators";
 import {TextArea} from "../../Common/FormsControls/FormControls";
+import {MainPageStatusWithHooks} from "./MainPageStatusWithHooks";
 
 type PropsType = {
     addPost: (newMainPageMessage: string) => void
@@ -60,7 +61,8 @@ export function MainPageInterface(props: PropsType) {
             {/*This is Content!*/}
             <div>
                 <img src={logo} alt="Logo" className={s['contentLogo']}/>
-                <MainPageStatus status={props.status} updateStatus={props.updateStatus}/>
+                {/*<MainPageStatus status={props.status} updateStatus={props.updateStatus}/>*/}
+                <MainPageStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
             </div>
             <MainPageInterfaceReduxForm onSubmit={addPost}/>
         </div>
